@@ -39,3 +39,5 @@
     - `docs: README.md 프로젝트 설명 업데이트`
   - **chore**: 빌드, 패키지 매니저 설정 등 기타 작업
     - `chore: ESLint 설정 추가`
+
+test
