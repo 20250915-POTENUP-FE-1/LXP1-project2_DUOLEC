@@ -1,12 +1,16 @@
+/* 헤더 영역 */
+
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  width: 100%;
+  width: 100vw;
   min-width: 500px;
   height: 94px;
-  padding: 0 20px;
+  padding: 0 30px;
+
+  border-bottom: 1px solid #cecece;
 }
 
 .header-logo {
@@ -35,6 +39,13 @@ header {
   height: 100%;
   border-radius: 30px;
   border: 2px solid #cecece;
+
+  padding: 0 40px 0 20px;
+}
+
+.header-search-input:focus {
+  outline: none;
+  border: 2px solid black;
 }
 
 .header-search-button {
@@ -46,15 +57,216 @@ header {
   position: absolute;
   right: 8px;
 
+  cursor: pointer;
+
   background-color: transparent;
   border: none;
 }
 
-.header-regist-button {
-  width: 150px;
-  height: 70px;
+.header-regist-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 45px;
+
+  border-radius: 15px;
+  cursor: pointer;
+
   background-color: transparent;
   border: none;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 500;
+  text-decoration: none;
+  color: #000;
+}
+
+.header-regist-link:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+.header-regist-link:hover {
+  border: 1px solid #cecece;
+  transform: translateY(-1px);
+}
+
+/* 카테고리 영역 */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+}
+
+.main-category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  gap: 70px;
+
+  padding: 50px 300px 0;
+}
+
+.main-category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 90px;
+  height: 130px;
+
+  cursor: pointer;
+
+  background-color: transparent;
+  border: none;
+}
+
+.main-category-item:hover .main-category-item-icon {
+  background-color: #58a7fc55;
+}
+
+.main-category-item-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 20px;
+
+  background-color: #cecece;
+}
+
+.main-category-item-name {
+  font-size: 16px;
+  text-wrap: nowrap;
+}
+
+/*  강의 목록 영역 */
+.main-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 1240px;
+
+  padding-top: 100px;
+}
+
+.main-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 5px;
+}
+
+.main-list-header-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.main-list-header-option {
+  display: flex;
+  font-size: 16px;
+  gap: 15px;
+}
+.main-list-header-option > .level,
+.main-list-header-option > .sort {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.main-list-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 280px;
+  height: 320px;
+
+  border: 1px solid #33333320;
+  border-radius: 20px;
+  background-color: #78b9ff55;
+
+  cursor: pointer;
+}
+
+.card:hover .card-thumbnail {
+  filter: brightness(0.7);
+}
+
+.card-thumbnail {
+  border: none;
+  outline: none;
+  background-color: #58a7fc55;
+  width: 100%;
+  height: 180px;
+  border-radius: 20px 20px 0 0;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  padding: 0 20px;
+}
+
+.card-tags {
+  width: 100%;
+  padding: 9px 0;
+}
+
+.tag-box {
+  display: inline;
+  position: relative;
+  background-color: #58a7fc55;
+  border-radius: 50px;
+  padding: 0 8px;
+}
+.tag-text {
+  color: #33333380;
+
+  font-size: 12px;
+  position: relative;
+  top: -2px;
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: #33333320;
+}
+
+.card-title {
+  width: 100%;
+  height: 65px;
+
+  padding: 9px 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.card-author {
+  width: 100%;
+  font-size: 14px;
+  color: #33333380;
 }
