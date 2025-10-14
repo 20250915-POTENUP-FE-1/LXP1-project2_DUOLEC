@@ -1,0 +1,356 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  min-width: 500px;
+  height: 94px;
+  padding: 0 20px;
+  border-bottom: 1px solid #CECECE;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 120px;
+  height: 60px;
+
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 36px 0px;
+  background-color: #e2e2e277;
+}
+
+/* 제목 */
+
+.page-title {
+  margin-bottom: 45px;
+
+  font-size: 24px;
+}
+
+.regist-form {
+  width: calc(100vw - 34%);
+
+  padding: 30px 40px;
+}
+
+.regist-lecture-title {
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.regist-lecture-title h5 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.regist-lecture-title p {
+  font-size: 14px;
+  color: #8c8c8c;
+
+  margin-bottom: 33px;
+}
+
+.regist-title-input {
+  display:flex;
+}
+
+.regist-title-input input{
+  width: 100%;
+  height: 45px;
+  padding: 5px;
+  flex-grow: 1;
+  
+  border: none;
+  border-bottom: 1px solid #333;
+}
+
+.regist-title-input input:focus {
+  outline: 2px solid #58a7fc7e;
+  border-radius: 5px;
+  border: none;
+}
+
+.regist-title-input span {
+  position: absolute;
+  top: 114px;
+  right: 24px;
+}
+
+/* 썸네일 */
+
+.regist-sumnail {
+  margin-bottom: 70px;
+}
+
+.regist-sumnail h5 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.regist-sumnail p {
+  font-size: 14px;
+  color: #8c8c8c;
+
+  margin-bottom: 33px;
+}
+
+.regist-sumnail-area {
+  display: flex;
+  justify-content: center;
+}
+
+.regist-sumnail-area label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: calc(100vw - 95%);
+  height: 323px;
+  border: 1px solid #333;
+  border-radius: 10px;
+}
+
+.upload-image {
+  margin-bottom: 40px;
+}
+
+.upload-image  svg{
+  width: 70px;
+  height: 70px;
+
+  border: 1px solid #333;
+  border-radius: 50%;
+}
+
+.regist-sumnail-area label p {
+  margin: 0;
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.regist-sumnail-area label span {
+  color: #ccc;
+  font-size: 16px;
+}
+
+.regist-sumnail input[type="file"] {
+  display: none;
+}
+
+
+/* 난이도 */
+.regist-lecture-level {
+  margin-bottom: 70px;
+}
+
+.regist-lecture-level h5 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.regist-lecture-level p {
+  font-size: 14px;
+}
+
+.level-select-area {
+  position: relative;
+  width: 100%;
+  margin-top: 33px;
+
+}
+
+.level-select-area button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 45px;
+  text-align: left;
+  padding: 0 5px;
+  color: #8c8c8c;
+  cursor: pointer;
+  border: none;
+  border-bottom: 1px solid #333;
+}
+
+.level-select-area svg {
+  transition: all .3s;
+}
+
+.level-select-area ul {
+  width: 100%;
+  height: 0px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  overflow: hidden;
+
+  list-style: none;
+  border-radius: 20px;
+  transition: all .3s;
+}
+
+.level-select-area li {
+  width: 100%;
+  height: 40px;
+  line-height: 30px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.level-select-area li:hover {
+  color:#58a7fc7e;
+}
+
+.level-select-area li:first-child {
+  padding: 5px 10px 0;
+}
+
+.level-select-area li:last-child {
+  padding: 0 10px 5px;
+}
+
+.open-level {
+  height: 120px !important;
+  border: 1px solid #c8c8c8;
+}
+
+.rotate {
+  transform:rotate(180deg)
+}
+
+/* 카테고리 */
+.regist-lecture-category {
+  margin-bottom: 70px;
+}
+
+.regist-lecture-category h5 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.regist-lecture-category p {
+  font-size: 14px;
+}
+
+.category-select-area {
+  position: relative;
+  width: 100%;
+  margin-top: 33px;
+}
+
+.category-select-area button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 45px;
+  text-align: left;
+  padding: 0 5px;
+  color: #8c8c8c;
+  cursor: pointer;
+  border: none;
+  border-bottom: 1px solid #333;
+}
+
+.category-select-area svg {
+  transition: all .3s;
+}
+
+.category-select-area ul {
+  width: 100%;
+  height: 0px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  overflow: hidden;
+
+  list-style: none;
+  border-radius: 20px;
+  transition: all .3s;
+}
+
+.category-select-area li {
+  width: 100%;
+  height: 40px;
+  line-height: 30px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.category-select-area li:hover {
+  color:#58a7fc7e;
+}
+
+.category-select-area li:first-child {
+  padding: 5px 10px 0;
+}
+
+.category-select-area li:last-child {
+  padding: 0 10px 5px;
+}
+
+.open-category {
+  height: 240px !important;
+  border: 1px solid #c8c8c8;
+}
+
+/* 강의소개 */
+.regist-description {
+  margin-bottom: 30px;
+}
+.regist-description h5 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.regist-description p {
+  font-size: 14px;
+}
+
+.regist-description textarea {
+  margin-top: 33px;
+  padding: 10px;
+
+  resize: none;
+  border-radius: 20px;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.regist-description textarea:focus {
+  border: 2px solid #58a7fc7e;
+  outline: none;
+}
+
+/* 다음 버튼 */
+
+.btn-next-area {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-next {
+  width: 120px;
+  height: 45px;
+  
+  background-color: #58a7fc7e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer
+}
