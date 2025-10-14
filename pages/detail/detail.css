@@ -1,0 +1,274 @@
+/* 헤더 영역 */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100vw;
+  min-width: 500px;
+  height: 94px;
+  padding: 0 30px;
+
+  border-bottom: 1px solid #cecece;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 120px;
+  height: 60px;
+
+  cursor: pointer;
+}
+
+/* 메인 영역 */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+
+  padding-top: 50px;
+}
+
+.main-top {
+  width: 900px;
+  height: 506px;
+}
+
+.main-top-image {
+  width: 100%;
+  height: 100%;
+  background-color: #58a7fc55;
+}
+
+.main-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1250px;
+
+  gap: 20px;
+}
+
+.main-info-major {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 200px;
+  padding-top: 20px;
+}
+
+.main-info-major-left {
+  display: flex;
+  flex: 8;
+  flex-direction: column;
+  align-items: center;
+}
+
+.space-between {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.author {
+  font-size: 24px;
+  font-weight: 500;
+  color: #33333380;
+}
+
+.level {
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}
+
+.title {
+  width: 100%;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.tags {
+  padding-top: 20px;
+  width: 100%;
+}
+
+.tag {
+  display: block;
+  background-color: #58a7fc;
+  color: white;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 20px;
+}
+
+.main-info-major-right {
+  display: flex;
+  flex: 2;
+  align-items: flex-start;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.btn-sign-up {
+  width: 80%;
+  height: 80px;
+  background-color: #58a7fc;
+  color: white;
+  font-size: 18px;
+
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.btn-sign-up:hover {
+  filter: brightness(0.9);
+}
+
+.main-info-description {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  position: relative;
+  background-color: #33333320;
+}
+
+.description-text {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-expand-description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+
+  width: 70px;
+  height: 25px;
+
+  bottom: 10px;
+  left: calc(50% - 35px);
+
+  gap: 5px;
+  border: none;
+  background-color: transparent;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.btn-expand-description:hover {
+  text-decoration: underline;
+}
+
+.main-curriculum {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 1250px;
+  margin-top: 40px;
+
+  border-radius: 10px;
+  border: 1px solid #c8c8c8;
+}
+
+.main-curriculum-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+}
+
+.main-curriculum-header-title {
+  font-size: 18px;
+}
+
+.main-curriculum-header-count {
+  font-size: 16px;
+  color: #c8c8c8;
+}
+
+.chapter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  border-top: 1px solid #c8c8c8;
+}
+
+.chapter-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 28px;
+  border-bottom: 1px solid #c8c8c8;
+}
+
+.chapter-header-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.btn-expand-lecture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  background-color: transparent;
+  color: #c8c8c8;
+
+  cursor: pointer;
+
+  gap: 5px;
+}
+.btn-expand-lecture:hover {
+  color: black;
+}
+
+.chapter-lectures {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+
+  padding: 20px 30px 20px 30px;
+
+  cursor: pointer;
+}
+
+.lecture {
+  padding: 10px 20px;
+}
+
+.lecture-title {
+  color: #c8c8c8;
+}
+
+.lecture:hover .lecture-title {
+  color: black;
+}
