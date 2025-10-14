@@ -9,6 +9,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* 3. Enable keyword animations */
@@ -78,4 +79,8 @@ h6 {
 a {
   text-decoration: none;
   color: black;
+}
+
+ul {
+  list-style: none;
 }
