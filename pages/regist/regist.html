@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../reset.css" />
+  <link rel="stylesheet" href="./regist.css" />
+  <title>Duolec</title>
+</head>
+<body>
+  <header>
+    <div class="header-logo">
+        <a href="/">
+          <img class="header-logo-image" src="../../assets/images/logo.png" />
+        </a>
+      </div>
+  </header>
+  <main>
+    <form class="regist-form">
+      
+      <div class="page-title">
+        <h4>강의 등록</h4>
+      </div>
+
+      <div class="regist-lecture-title">
+        <h5>강의 제목</h5>
+        <p>강의 대표 제목을 추가해주세요.</p>
+        <div class="regist-title-input">
+          <input type="text" autocomplete="off" name="title" maxlength="50"/>
+          <span class="letter-length">0 / 50</span>
+        </div>
+      </div>
+
+      <div class="regist-sumnail">
+        <h5>썸네일</h5>
+        <p>강의 대표 이미지를 추가해주세요.</p>
+        <div class="regist-sumnail-area">
+          <label for="sumnail-image">
+            <div class="upload-image">
+              <svg width="70" height="70" viewBox="0 0 94 97" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <rect x="0.5" y="0.5" width="92.0577" height="95.7688" fill="url(#pattern0_10_37)" stroke="white"/>
+              <defs>
+              <pattern id="pattern0_10_37" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image0_10_37" transform="matrix(0.0104167 0 0 0.0100172 0 0.0191751)"/>
+              </pattern>
+              <image id="image0_10_37" width="96" height="96" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA7UlEQVR4nO3RwQ0DMQwEMfff9KSEvA57iUlgC5DmHAAAAAB4r76MhyXAVgJsJcBWAmwlwFYCbCXAVgJsJcBWAmwlwFYCbCXAVgJsJcBWAmwlwFYCbCXAVgJsJcBWAmwlwFYCbCXAVgJsJcBWAmwlwFYCbHV7gG8PuH2PWx/YyyfAEeDqPW59YC+fAEeAq/e49YG9fH+v2x+wlgBbCbCVAFsJsJUAWwmwlQBbCbCVAFsJsJUAWwmwlQBbCbCVAFsJsJUAWwmwlQBbCbCVAFsJsJUAWwmwlQBbCbCVAFsJsJUAWwmwlQAAAAAAnB/0AVNrO/3V3WW6AAAAAElFTkSuQmCC"/>
+              </defs>
+              </svg>
+            </div>
+            <p>이미지 업로드</p>
+            <span>PNG / JPG / GIF (최대5MB)</span>
+            <span>16:9 비율, 1600 * 900px 이상 사이즈 권장</span>
+          </label>
+          <input type="file" id="sumnail-image"/>
+        </div>
+      </div>
+
+      <div class="regist-lecture-level">
+        <h5>강의 난이도</h5>
+        <p>어느 수준의 유저들을 위한 강의인지 선택해주세요.</p>
+        <div class="level-select-area">
+          <button class="level-label">
+            <p>난이도를 선택해주세요.</p>
+            <svg width="16" height="16" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.387 0.477051L-3.8147e-06 0.47705L9.69351 16.6052L19.387 0.477051Z" fill="#333"/>
+            </svg>
+          </button>
+          <ul>
+            <li class="level-content">하급</li>
+            <li class="level-content">중급</li>
+            <li class="level-content">상급</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="regist-lecture-category">
+        <h5>카테고리</h5>
+        <p>어느 수준의 유저들을 위한 강의인지 선택해주세요.</p>
+        <div class="category-select-area">
+          <button class="category-label">
+            <p>카테고리를 선택해주세요.</p>
+            <svg width="16" height="16" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.387 0.477051L-3.8147e-06 0.47705L9.69351 16.6052L19.387 0.477051Z" fill="#333"/>
+            </svg>
+          </button>
+          <ul>
+            <li class="category-content">Frontend</li>
+            <li class="category-content">Backend</li>
+            <li class="category-content">DevOps</li>
+            <li class="category-content">Data Science</li>
+            <li class="category-content">Mobile</li>
+            <li class="category-content">AI / ML</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="regist-description">
+        <h5>강의 소개</h5>
+        <p>유저에게 어떤 강의인지 설명해주세요.</p>
+        <textarea rows ="10" cols="98"></textarea>
+      </div>
+      
+      <div class="btn-next-area">
+        <button class="btn-next">다음</button>
+      </div>
+    </form>
+  </main>
+
+  <script type="module" src="./regist.js"></script>
+</body>
+</html>
