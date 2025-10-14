@@ -14,13 +14,10 @@
 
 이름만 보고도 역할과 유형을 파악할 수 있도록 규칙을 정합니다.
 
-- **컴포넌트 (Components)**: **파스칼 케이스(PascalCase)**
-  - `Example: UserProfile.js, MainButton.vue`
 - **함수 및 변수 (Functions, Variables)**: **카멜 케이스(camelCase)**
   - `Example: const userName; function getUserInfo() {}`
-- **CSS 클래스 (CSS Classes)**: **케밥 케이스(kebab-case)** 또는 **BEM** 방식
+- **CSS 클래스 (CSS Classes)**: **케밥 케이스(kebab-case)**
   - `Example (kebab-case): .user-profile`
-  - `Example (BEM): .card__title--large`
 - **상수 (Constants)**: **스네이크 대문자 케이스(SNAKE_UPPER_CASE)**
   - `Example: const MAX_USER_COUNT = 10;`
 
