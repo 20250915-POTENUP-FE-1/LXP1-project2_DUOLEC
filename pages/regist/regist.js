@@ -1,16 +1,16 @@
 const $ = (selector) => document.querySelector(selector);
 
 // 글자 카운팅
-$('.title-input').addEventListener('keyup',(e) => {
+$('.title-input').addEventListener('input',(e) => {
   let content = $('.title-input').value;
-  $('.letter-length').innerText = `${content.length} / 50`
+  $('.letter-length').innerText = `${content.length + 1} / 50`
 })
 
 // 난이도 아코디언 토글
 $('.level-label').addEventListener('click', (e)=> {
   e.preventDefault()
-  $('.level-select-area ul').classList.toggle('open-level')-
-  $('.level-select-area svg').classList.toggle('rotate')
+  $('.level-select-area ul').classList.toggle('open-level');
+  $('.level-select-area svg').classList.toggle('rotate');
 })
 
 

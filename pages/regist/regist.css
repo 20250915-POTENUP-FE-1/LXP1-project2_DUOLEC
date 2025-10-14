@@ -6,7 +6,7 @@ header {
   width: 100%;
   min-width: 500px;
   height: 94px;
-  padding: 0 20px;
+  padding: 0 30px;
   border-bottom: 1px solid #CECECE;
 }
 
@@ -35,14 +35,13 @@ main {
 
 .page-title {
   margin-bottom: 45px;
-
   font-size: 24px;
 }
 
 .regist-form {
   width: calc(100vw - 34%);
-
   padding: 30px 40px;
+  background-color: #fff;
 }
 
 .regist-lecture-title {
