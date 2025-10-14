@@ -84,7 +84,7 @@ main {
 
 .regist-title-input span {
   position: absolute;
-  top: 114px;
+  top: 104px;
   right: 24px;
 }
 
@@ -324,7 +324,10 @@ main {
 
 .regist-description textarea {
   margin-top: 33px;
-  padding: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 400px;
 
   resize: none;
   border-radius: 20px;
