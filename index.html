@@ -11,11 +11,19 @@
     <header>
       <div class="header-logo">
         <a href="/">
-          <img class="header-logo-image" src="assets/images/logo.png" />
+          <img
+            class="header-logo-image"
+            src="/assets/images/logo.png"
+            alt="로고 이미지"
+          />
         </a>
       </div>
       <div class="header-search">
-        <input class="header-search-input" type="text" />
+        <input
+          class="header-search-input"
+          placeholder="강의를 검색하세요."
+          type="text"
+        />
         <button class="header-search-button">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -55,9 +63,161 @@
         </button>
       </div>
       <div class="header-regist">
-        <button class="header-regist-button">강의 등록</button>
+        <a href="pages/regist/regist.html" class="header-regist-link"
+          >강의 등록</a
+        >
       </div>
     </header>
-    <main></main>
+    <main>
+      <div class="main-category">
+        <button class="main-category-item btn-category-all">
+          <div class="main-category-item-icon"></div>
+          <span class="main-category-item-name">전체</span>
+        </button>
+        <button class="main-category-item btn-category-frontend">
+          <div class="main-category-item-icon"></div>
+          <span class="main-category-item-name">Frontend</span>
+        </button>
+        <button class="main-category-item btn-category-backend">
+          <div class="main-category-item-icon"></div>
+          <span class="main-category-item-name">Backend</span>
+        </button>
+        <button class="main-category-item btn-category-devops">
+          <div class="main-category-item-icon"></div>
+          <span class="main-category-item-name">DevOps</span>
+        </button>
+        <button class="main-category-item btn-category-datascience">
+          <div class="main-category-item-icon"></div>
+          <span class="main-category-item-name">Data Science</span>
+        </button>
+        <button class="main-category-item btn-category-mobile">
+          <div class="main-category-item-icon"></div>
+          <span class="main-category-item-name">Mobile</span>
+        </button>
+        <button class="main-category-item btn-category-aiml">
+          <div class="main-category-item-icon"></div>
+          <span class="main-category-item-name">AI / ML</span>
+        </button>
+      </div>
+      <div class="main-list">
+        <div class="main-list-header">
+          <span class="main-list-header-title">강의 목록</span>
+          <div class="main-list-header-option">
+            <button class="level">난이도</button>
+            <button class="sort">인기순</button>
+          </div>
+        </div>
+        <div class="main-list-grid">
+          <a
+            href="/pages/detail/detail.html"
+            class="card"
+            onerror="this.style.display='none'"
+          >
+            <img class="card-thumbnail" src="" alt="썸네일 이미지" />
+            <div class="card-info">
+              <span class="card-tags">
+                <div class="tag-box">
+                  <span class="tag-text">#Frontend</span>
+                </div>
+              </span>
+              <div class="separator"></div>
+              <div class="card-title">React LXP 플랫폼 구축</div>
+              <span class="card-author">홍길동</span>
+            </div>
+          </a>
+          <a href="/pages/detail/detail.html" class="card">
+            <img class="card-thumbnail" src="" alt="썸네일 이미지" />
+            <div class="card-info">
+              <span class="card-tags">
+                <div class="tag-box">
+                  <span class="tag-text">#Frontend</span>
+                </div>
+              </span>
+              <div class="separator"></div>
+              <div class="card-title">React LXP 플랫폼 구축</div>
+              <span class="card-author">홍길동</span>
+            </div>
+          </a>
+          <a href="/pages/detail/detail.html" class="card">
+            <img class="card-thumbnail" src="" alt="썸네일 이미지" />
+            <div class="card-info">
+              <span class="card-tags">
+                <div class="tag-box">
+                  <span class="tag-text">#Frontend</span>
+                </div>
+              </span>
+              <div class="separator"></div>
+              <div class="card-title">React LXP 플랫폼 구축</div>
+              <span class="card-author">홍길동</span>
+            </div>
+          </a>
+          <a href="/pages/detail/detail.html" class="card">
+            <img class="card-thumbnail" src="" alt="썸네일 이미지" />
+            <div class="card-info">
+              <span class="card-tags">
+                <div class="tag-box">
+                  <span class="tag-text">#Frontend</span>
+                </div>
+              </span>
+              <div class="separator"></div>
+              <div class="card-title">React LXP 플랫폼 구축</div>
+              <span class="card-author">홍길동</span>
+            </div>
+          </a>
+          <a href="/pages/detail/detail.html" class="card">
+            <img class="card-thumbnail" src="" alt="썸네일 이미지" />
+            <div class="card-info">
+              <span class="card-tags">
+                <div class="tag-box">
+                  <span class="tag-text">#Frontend</span>
+                </div>
+              </span>
+              <div class="separator"></div>
+              <div class="card-title">React LXP 플랫폼 구축</div>
+              <span class="card-author">홍길동</span>
+            </div>
+          </a>
+          <a href="/pages/detail/detail.html" class="card">
+            <img class="card-thumbnail" src="" alt="썸네일 이미지" />
+            <div class="card-info">
+              <span class="card-tags">
+                <div class="tag-box">
+                  <span class="tag-text">#Frontend</span>
+                </div>
+              </span>
+              <div class="separator"></div>
+              <div class="card-title">React LXP 플랫폼 구축</div>
+              <span class="card-author">홍길동</span>
+            </div>
+          </a>
+          <a href="/pages/detail/detail.html" class="card">
+            <img class="card-thumbnail" src="" alt="썸네일 이미지" />
+            <div class="card-info">
+              <span class="card-tags">
+                <div class="tag-box">
+                  <span class="tag-text">#Frontend</span>
+                </div>
+              </span>
+              <div class="separator"></div>
+              <div class="card-title">React LXP 플랫폼 구축</div>
+              <span class="card-author">홍길동</span>
+            </div>
+          </a>
+          <a href="/pages/detail/detail.html" class="card">
+            <img class="card-thumbnail" src="" alt="썸네일 이미지" />
+            <div class="card-info">
+              <span class="card-tags">
+                <div class="tag-box">
+                  <span class="tag-text">#Frontend</span>
+                </div>
+              </span>
+              <div class="separator"></div>
+              <div class="card-title">React LXP 플랫폼 구축</div>
+              <span class="card-author">홍길동</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
