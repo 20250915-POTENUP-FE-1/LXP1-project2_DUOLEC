@@ -203,6 +203,7 @@ main {
 
 .main-curriculum-header-title {
   font-size: 18px;
+  font-weight: 500;
 }
 
 .main-curriculum-header-count {
@@ -219,13 +220,28 @@ main {
   border-top: 1px solid #c8c8c8;
 }
 
+.chapter.visible .chapter-header {
+  border-bottom: 1px solid #c8c8c8;
+}
+
+.chapter.visible .chapter-lectures {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+
+  padding: 20px 30px 20px 30px;
+
+  cursor: pointer;
+}
+
 .chapter-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   padding: 20px 28px;
-  border-bottom: 1px solid #c8c8c8;
 }
 
 .chapter-header-title {
@@ -246,20 +262,21 @@ main {
 
   gap: 5px;
 }
+
 .btn-expand-lecture:hover {
   color: black;
 }
 
+.btn-expand-lecture svg {
+  transition: all 0.3s;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
 .chapter-lectures {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 100%;
-
-  padding: 20px 30px 20px 30px;
-
-  cursor: pointer;
+  display: none;
 }
 
 .lecture {
