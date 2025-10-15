@@ -78,7 +78,6 @@ function addChapter() {
 }
 
 function deleteLecture(e) {
-  console.log(e.target);
   if (
     e.target.closest(".chapter-form").getElementsByClassName("lecture-title")
       .length > 1
@@ -122,4 +121,9 @@ document.querySelector(".btn-chapter-delete").addEventListener("click", (e) => {
 $(".btn-submit").addEventListener("click", (e) => {
   e.preventDefault();
   window.location.href = "/index.html";
+});
+
+$(".back-icon").addEventListener("click", (e) => {
+  e.preventDefault();
+  window.history.back();
 });
