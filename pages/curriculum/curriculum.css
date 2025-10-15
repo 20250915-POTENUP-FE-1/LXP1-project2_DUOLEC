@@ -1,0 +1,245 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  min-width: 500px;
+  height: 94px;
+  padding: 0 20px;
+  border-bottom: 1px solid #cecece;
+  background-color: #fff;
+}
+
+body {
+  height: 100vh;
+  background-color: #e2e2e277;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 120px;
+  height: 60px;
+
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 36px 0px;
+}
+
+.curriculum-form {
+  width: calc(100vw - 34%);
+  padding: 30px 40px;
+  border-radius: 35px;
+}
+
+.page-title {
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.form-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 31px;
+  padding: 0 20px;
+}
+
+.form-top-chapter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-top-chapter span {
+  margin-left: 16px;
+  color: #5c5c5c;
+  font-weight: bold;
+}
+
+.btn-add-chapter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+
+  border: none;
+  background-color: #58a7fc7e;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-add-chapter p {
+  margin: 0px 0px 0px 5px;
+}
+
+/* 챕터 */
+
+.chapter-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.chapter-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 45px;
+  margin-bottom: 15px;
+
+  background-color: #fff;
+  border-radius: 35px;
+}
+
+.chapter-title {
+  position: relative;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.chapter-title h5 {
+  margin-bottom: 20px;
+
+  font-size: 18px;
+}
+
+.chapter-title span {
+  position: absolute;
+  top: 57px;
+  right: 20px;
+}
+
+.chapter-title input {
+  width: 100%;
+  height: 45px;
+  padding: 5px;
+
+  border: none;
+  border-bottom: 1px solid #333;
+}
+
+.chapter-title input:focus {
+  outline: none;
+  border-bottom: none;
+  border: 2px solid #58a7fc7e;
+  border-radius: 10px;
+}
+
+/* 챕터 등록 */
+.lecture-top-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.chapter-lectures h5 {
+  font-size: 18px;
+}
+
+.lecture-length {
+  font-size: 12px;
+  color: #5c5c5c;
+  font-weight: bold;
+}
+
+.lectures {
+  width: 100%;
+}
+
+.lecture-title {
+  position: relative;
+}
+
+.lectures input {
+  width: 100%;
+  border: 1px solid #c8c8c8;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 9px;
+}
+
+.lecture input:last-child {
+  margin-bottom: 20px;
+}
+
+.lectures input:focus {
+  border: 1px solid #58a7fc7e;
+  outline: none;
+}
+
+.lecture-title svg {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.btn-add-lecture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #c8c8c8;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-add-lecture:hover {
+  background-color: #58a7fc7e;
+}
+
+.btn-add-chapter-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 90px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: #c8c8c8;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-add-chapter-bottom:hover {
+  background-color: #58a7fc7e;
+}
+
+/* 등록 버튼 */
+.submit {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding: 0 20px;
+}
+
+.btn-submit {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #58a7fc7e;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
