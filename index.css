@@ -126,6 +126,9 @@ main {
 }
 
 .main-category-item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 90px;
   height: 90px;
   border-radius: 20px;
@@ -357,7 +360,9 @@ main {
   background-color: #c8c8c8;
 }
 
-.card-menu:hover,
+.card-menu:hover {
+  background-color: #ffffff30;
+}
 .menu-label:hover {
   background-color: #00000010;
 }
