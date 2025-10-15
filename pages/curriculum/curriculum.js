@@ -52,6 +52,9 @@ function addChapter() {
     .then((resText) => {
       const parser = new DOMParser();
       const doc = parser.parseFromString(resText, "text/html");
+      doc.body.firstElementChild.querySelector(
+        ".chapter-title-area h5"
+      ).innerText = `Chapter ${chapterForms.length + 1}.`;
       const $chapterForm = doc.body.firstElementChild;
 
       lastChapterForm.insertAdjacentElement("afterend", $chapterForm);
