@@ -360,7 +360,9 @@ main {
   background-color: #c8c8c8;
 }
 
-.card-menu:hover,
+.card-menu:hover {
+  background-color: #ffffff30;
+}
 .menu-label:hover {
   background-color: #00000010;
 }
