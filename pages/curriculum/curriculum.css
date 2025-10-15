@@ -30,6 +30,7 @@ body {
 main {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   flex-direction: column;
 
   padding: 36px 0px;
@@ -37,7 +38,6 @@ main {
 
 .curriculum-form {
   width: calc(100vw - 34%);
-  padding: 30px 40px;
   border-radius: 35px;
 }
 
@@ -110,9 +110,33 @@ main {
   margin-bottom: 50px;
 }
 
-.chapter-title h5 {
+.chapter-title-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 20px;
+}
 
+.chapter-title-area span {
+  width: 20px;
+  height: 20px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.btn-chapter-delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn-chapter-delete p {
+  margin-left: 3px;
+  font-size: 14px;
+}
+
+.chapter-title h5 {
   font-size: 18px;
 }
 
@@ -182,11 +206,21 @@ main {
   outline: none;
 }
 
-.lecture-title svg {
+.lecture-title .btn-delete {
+  width: 20px;
+  height: 20px;
   position: absolute;
   top: 15px;
   right: 10px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-delete svg {
+  width: 16px;
+  height: 16px;
 }
 
 .btn-add-lecture {
@@ -200,6 +234,10 @@ main {
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s;
+}
+
+.btn-add-lecture p {
+  margin-left: 5px;
 }
 
 .btn-add-lecture:hover {
@@ -218,6 +256,10 @@ main {
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s;
+}
+
+.btn-add-lecture-bottom p {
+  margin-left: 5px;
 }
 
 .btn-add-chapter-bottom:hover {
