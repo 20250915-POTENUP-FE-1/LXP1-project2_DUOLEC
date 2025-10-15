@@ -41,9 +41,20 @@ main {
   border-radius: 35px;
 }
 
+.back-icon {
+  cursor: pointer;
+}
+
 .page-title {
   margin-bottom: 25px;
   font-size: 24px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.page-title h4 {
+  margin-left: 10px;
 }
 
 .form-top {
@@ -78,6 +89,12 @@ main {
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-add-chapter:hover {
+  transform: translate(1px, -1px);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .btn-add-chapter p {
@@ -233,7 +250,7 @@ main {
   background-color: #c8c8c8;
   border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s;
 }
 
 .btn-add-lecture p {
@@ -242,6 +259,7 @@ main {
 
 .btn-add-lecture:hover {
   background-color: #58a7fc7e;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .btn-add-chapter-bottom {
@@ -255,7 +273,7 @@ main {
   background-color: #c8c8c8;
   border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s;
 }
 
 .btn-add-lecture-bottom p {
@@ -264,6 +282,7 @@ main {
 
 .btn-add-chapter-bottom:hover {
   background-color: #58a7fc7e;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 /* 등록 버튼 */
@@ -284,4 +303,10 @@ main {
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-submit:hover {
+  transform: translate(1px, -1px);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
