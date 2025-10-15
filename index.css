@@ -193,6 +193,14 @@ main {
   padding: 4px 8px;
 }
 
+.btn-level svg {
+  transition: all 0.3s;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
 .btn-level:hover,
 .btn-sort:hover {
   background-color: #00000010;

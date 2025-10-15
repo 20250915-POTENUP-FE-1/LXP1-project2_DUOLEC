@@ -6,6 +6,7 @@ let [sort, setSort] = ["인기순", (input) => (sort = input)];
 function toggleLevelFilter() {
   const $levelOptions = $(".level-options");
   $levelOptions.classList.toggle("visible");
+  $(".btn-level svg").classList.toggle("rotate");
 }
 
 function toggleSortFilter() {
@@ -78,6 +79,7 @@ document.addEventListener("click", (e) => {
   const isLevelFilter = e.target.closest(".level");
   if (!isLevelFilter) {
     $(".level-options").classList.remove("visible");
+    $(".btn-level svg").classList.remove("rotate");
   }
   // 정렬 필터 닫기
   const isSortFilter = e.target.closest(".sort");
