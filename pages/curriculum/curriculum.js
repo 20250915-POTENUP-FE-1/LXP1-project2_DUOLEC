@@ -11,23 +11,37 @@ function checkFormsLength() {
   }개의 챕터`;
 }
 
-function checkLectureLength(e) {
-  const clickedChapterForm = e.target.closest(".chapter-form");
-  clickedChapterForm.querySelector(".lecture-length").innerText = `${
-    e.target.closest(".lectures").children.length
-  }개의 강의`;
+function checkLectureLength($lectures) {
+  const $lectureList = $lectures.getElementsByClassName("lecture-title");
+  $lectures
+    .closest(".chapter-lectures")
+    .querySelector(
+      ".lecture-length"
+    ).innerText = `${$lectureList.length}개의 강의`;
 }
 
 function addLecture(e) {
-  const clickedLecture = e.target.closest(".lectures");
-  const lastLectureTitle =
-    clickedLecture.children[clickedLecture.children.length - 2];
+  const $lectures = e.target.closest(".lectures");
+  const lastLectureTitle = $lectures.children[$lectures.children.length - 2];
   fetch("/components/lecture.html")
     .then((res) => res.text())
     .then((resText) => {
-      lastLectureTitle.insertAdjacentHTML("afterend", resText);
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(resText, "text/html");
+      const $lectureTitle = doc.body.firstElementChild;
+
+      lastLectureTitle.insertAdjacentElement("afterend", $lectureTitle);
+      return $lectureTitle;
+    })
+    .then(($lectureTitle) => {
+      checkLectureLength($lectures);
+      $lectureTitle
+        .getElementsByClassName("btn-delete")[0]
+        .addEventListener("click", (e) => {
+          deleteLecture(e);
+          checkLectureLength($lectures);
+        });
     });
-  checkLectureLength(e);
 }
 
 function addChapter() {
@@ -36,9 +50,14 @@ function addChapter() {
   fetch("/components/chapter.html")
     .then((res) => res.text())
     .then((resText) => {
-      lastChapterForm.insertAdjacentHTML("afterend", resText);
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(resText, "text/html");
+      const $chapterForm = doc.body.firstElementChild;
+
+      lastChapterForm.insertAdjacentElement("afterend", $chapterForm);
+      return $chapterForm;
     })
-    .then(() => {
+    .then(($chapterForm) => {
       const afterChapterForms = document.querySelectorAll(".chapter-form");
       const afterLastChapterForm =
         afterChapterForms[afterChapterForms.length - 1];
@@ -47,11 +66,31 @@ function addChapter() {
         .getElementsByClassName("btn-add-lecture")[0]
         .addEventListener("click", (e) => {
           addLecture(e);
-          checkLectureLength(e);
         });
-
+      $chapterForm
+        .querySelector(".btn-chapter-delete")
+        .addEventListener("click", (e) => {
+          deleteChapter(e);
+          checkFormsLength();
+        });
       checkFormsLength();
     });
+}
+
+function deleteLecture(e) {
+  console.log(e.target);
+  if (
+    e.target.closest(".chapter-form").getElementsByClassName("lecture-title")
+      .length > 1
+  ) {
+    e.target.closest(".lecture-title").remove();
+  }
+}
+
+function deleteChapter(e) {
+  if (document.querySelectorAll(".chapter-form").length > 1) {
+    e.target.closest(".chapter-form").remove();
+  }
 }
 
 document.querySelectorAll(".btn-add-lecture").forEach((btn) => {
@@ -65,6 +104,19 @@ document.querySelectorAll(".btn-add").forEach((btn) => {
     e.preventDefault();
     addChapter();
   });
+});
+
+document.querySelectorAll(".btn-delete").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const $lectures = e.target.closest(".lectures");
+    deleteLecture(e);
+    checkLectureLength($lectures);
+  });
+});
+
+document.querySelector(".btn-chapter-delete").addEventListener("click", (e) => {
+  deleteChapter(e);
 });
 
 $(".btn-submit").addEventListener("click", (e) => {
