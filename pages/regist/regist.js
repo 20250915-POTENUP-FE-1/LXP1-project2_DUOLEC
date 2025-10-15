@@ -1,4 +1,4 @@
-const $ = (selector) => document.querySelector(selector);
+import { $ } from "/utils/common.js";
 
 // 글자 카운팅
 $(".title-input").addEventListener("input", (e) => {
@@ -44,4 +44,9 @@ document.querySelectorAll(".category-content").forEach((level) => {
     $(".category-select-area ul").classList.remove("open-category");
     $(".category-select-area svg").classList.remove("rotate");
   });
+});
+
+$(".btn-next").addEventListener("click", (e) => {
+  e.preventDefault();
+  window.location.href = "/pages/curriculum/curriculum.html";
 });
