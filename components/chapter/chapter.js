@@ -44,6 +44,13 @@ async function createChapter(data) {
     data.deleteChapter
   );
 
+  componentLoader.attachEvent(
+    chapterElement,
+    ".chapter-title-input",
+    "input",
+    data.checkChapterLength
+  );
+
   //  레슨 인풋 생성
   if (!data.lessons.length) {
     const lesson = await createLesson({
