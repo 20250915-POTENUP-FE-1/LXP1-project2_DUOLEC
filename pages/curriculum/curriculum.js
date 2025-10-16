@@ -1,4 +1,7 @@
 import { $ } from "/utils/common.js";
+import { addLocalData } from "/utils/local.js";
+import { deleteTempData, modifyTempData } from "/utils/session.js";
+import { nanoid } from "https://cdn.skypack.dev/nanoid";
 
 $(".chapter-title-input").addEventListener("input", () => {
   let title = $(".chapter-title-input").value;
@@ -123,6 +126,36 @@ document.querySelector(".btn-chapter-delete").addEventListener("click", (e) => {
 
 $(".btn-submit").addEventListener("click", (e) => {
   e.preventDefault();
+  const $chapterForms = document.querySelectorAll(".chapter-form");
+  const tempData = modifyTempData();
+  const curriculum = [];
+
+  for (let i = 0; i < $chapterForms.length; i++) {
+    const lesson = [];
+    curriculum.push({
+      chapterTitle: $chapterForms[i].querySelector(".chapter-title-input")
+        .value,
+      lessonCount: $chapterForms[i].querySelectorAll(".lecture-title").length,
+      lessons: lesson,
+    });
+    for (
+      let k = 0;
+      k < $chapterForms[i].querySelectorAll(".lecture-title").length;
+      k++
+    ) {
+      let lessonId = nanoid();
+      lesson.push({
+        lessonId: lessonId,
+        lessonTitle: $chapterForms[i].querySelectorAll(".lecture-title-input")[
+          k
+        ].value,
+      });
+    }
+  }
+  tempData.curriculum = curriculum;
+
+  addLocalData(tempData);
+  deleteTempData();
   window.location.href = "/index.html";
 });
 

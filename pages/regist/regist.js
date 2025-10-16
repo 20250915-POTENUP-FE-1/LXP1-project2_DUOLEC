@@ -1,9 +1,26 @@
 import { $ } from "/utils/common.js";
+import { addTempData, modifyTempData } from "/utils/session.js";
+
+const sessionData = JSON.parse(modifyTempData());
+console.log(sessionData);
+
+function checkSessionData() {
+  const $title = $(".title-input");
+  const $levels = $(".level-label p");
+  const $category = $(".category-label p");
+  const $description = $(".description");
+  if (sessionStorage.length > 1) {
+    $title.value = sessionData.title;
+    $levels.innerText = sessionData.level;
+    $category.innerText = sessionData.category.trim();
+    $description.value = sessionData.description;
+  }
+}
 
 // 글자 카운팅
 $(".title-input").addEventListener("input", (e) => {
   let content = $(".title-input").value;
-  $(".letter-length").innerText = `${content.length + 1} / 50`;
+  $(".letter-length").innerText = `${content.length} / 50`;
 });
 
 // 난이도 아코디언 토글
@@ -48,5 +65,18 @@ document.querySelectorAll(".category-content").forEach((level) => {
 
 $(".btn-next").addEventListener("click", (e) => {
   e.preventDefault();
+  const $titleValue = $(".title-input").value;
+  const $levels = $(".level-label p").innerText;
+  const $category = $(".category-label p").innerText;
+  const $description = $(".description").value;
+  const data = {
+    title: $titleValue,
+    level: $levels,
+    category: $category,
+    description: $description,
+  };
+  addTempData(data);
   window.location.href = "/pages/curriculum/curriculum.html";
 });
+
+checkSessionData();
