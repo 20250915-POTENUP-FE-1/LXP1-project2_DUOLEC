@@ -1,0 +1,33 @@
+.lesson-title {
+  position: relative;
+}
+
+.lessons input {
+  width: 100%;
+  border: 1px solid #c8c8c8;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 9px;
+}
+
+.lesson input:last-child {
+  margin-bottom: 20px;
+}
+
+.lessons input:focus {
+  border: 1px solid #58a7fc7e;
+  outline: none;
+}
+
+.lesson-title .btn-delete {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

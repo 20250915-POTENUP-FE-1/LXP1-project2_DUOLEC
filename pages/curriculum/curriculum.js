@@ -1,6 +1,11 @@
+import {
+  createChapter,
+  createChapters,
+} from "../../components/chapter/chapter.js";
+import { createLesson } from "../../components/lesson/lesson.js";
 import { $ } from "/utils/common.js";
 import { addLocalData } from "/utils/local.js";
-import { deleteTempData, modifyTempData } from "/utils/session.js";
+import { deleteTempData, loadTempData } from "/utils/session.js";
 import { nanoid } from "https://cdn.skypack.dev/nanoid";
 
 $(".chapter-title-input").addEventListener("input", () => {
@@ -14,95 +19,89 @@ function checkFormsLength() {
   }개의 챕터`;
 }
 
-function checkLectureLength($lectures) {
-  const $lectureList = $lectures.getElementsByClassName("lecture-title");
-  $lectures
-    .closest(".chapter-lectures")
+function checkLessonLength($lessons) {
+  const $lessonList = $lessons.getElementsByClassName("lesson-title");
+  $lessons
+    .closest(".chapter-lessons")
     .querySelector(
-      ".lecture-length"
-    ).innerText = `${$lectureList.length}개의 강의`;
+      ".lesson-length"
+    ).innerText = `${$lessonList.length}개의 강의`;
 }
 
-function addLecture(e) {
-  const $lectures = e.target.closest(".lectures");
-  const lastLectureTitle = $lectures.children[$lectures.children.length - 2];
-  fetch("/components/lecture.html")
-    .then((res) => res.text())
-    .then((resText) => {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(resText, "text/html");
-      const $lectureTitle = doc.body.firstElementChild;
+function addLesson(e) {
+  const $lessons = e.target.closest(".lessons");
+  // const lastLessonTitle = $lessons.children[$lessons.children.length - 2];
+  // fetch("/components/lesson.html")
+  //   .then((res) => res.text())
+  //   .then((resText) => {
+  //     const parser = new DOMParser();
+  //     const doc = parser.parseFromString(resText, "text/html");
+  //     const $lessonTitle = doc.body.firstElementChild;
 
-      lastLectureTitle.insertAdjacentElement("afterend", $lectureTitle);
-      return $lectureTitle;
-    })
-    .then(($lectureTitle) => {
-      checkLectureLength($lectures);
-      $lectureTitle
-        .getElementsByClassName("btn-delete")[0]
-        .addEventListener("click", (e) => {
-          deleteLecture(e);
-          checkLectureLength($lectures);
-        });
-    });
+  //     lastLessonTitle.insertAdjacentElement("afterend", $lessonTitle);
+  //     return $lessonTitle;
+  //   })
+  //   .then(($lessonTitle) => {
+  checkLessonLength($lessons);
+  // $lessonTitle
+  //   .getElementsByClassName("btn-delete")[0]
+  //   .addEventListener("click", (e) => {
+  //     deleteLesson(e);
+  checkLessonLength($lessons);
+
+  // });
+  // });
 }
 
-function addChapter() {
+async function addChapter() {
   const chapterForms = document.querySelectorAll(".chapter-form");
   const lastChapterForm = chapterForms[chapterForms.length - 1];
-  fetch("/components/chapter.html")
-    .then((res) => res.text())
-    .then((resText) => {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(resText, "text/html");
-      doc.body.firstElementChild.querySelector(
-        ".chapter-title-area h5"
-      ).innerText = `Chapter ${chapterForms.length + 1}.`;
-      const $chapterForm = doc.body.firstElementChild;
+  // fetch("/components/chapter.html")
+  //   .then((res) => res.text())
+  //   .then((resText) => {
+  //     const parser = new DOMParser();
+  //     const doc = parser.parseFromString(resText, "text/html");
+  //     doc.body.firstElementChild.querySelector(
+  //       ".chapter-title-area h5"
+  //     ).innerText = `Chapter ${chapterForms.length + 1}.`;
+  //     const $chapterForm = doc.body.firstElementChild;
 
-      lastChapterForm.insertAdjacentElement("afterend", $chapterForm);
-      return $chapterForm;
-    })
-    .then(($chapterForm) => {
-      const afterChapterForms = document.querySelectorAll(".chapter-form");
-      const afterLastChapterForm =
-        afterChapterForms[afterChapterForms.length - 1];
+  //     lastChapterForm.insertAdjacentElement("afterend", $chapterForm);
+  //     return $chapterForm;
+  //   })
+  //   .then(($chapterForm) => {
+  //     const afterChapterForms = document.querySelectorAll(".chapter-form");
+  //     const afterLastChapterForm =
+  //       afterChapterForms[afterChapterForms.length - 1];
 
-      afterLastChapterForm
-        .getElementsByClassName("btn-add-lecture")[0]
-        .addEventListener("click", (e) => {
-          addLecture(e);
-        });
-      $chapterForm
-        .querySelector(".btn-chapter-delete")
-        .addEventListener("click", (e) => {
-          deleteChapter(e);
-          checkFormsLength();
-        });
-      checkFormsLength();
-    });
-}
-
-function deleteLecture(e) {
-  if (
-    e.target.closest(".chapter-form").getElementsByClassName("lecture-title")
-      .length > 1
-  ) {
-    e.target.closest(".lecture-title").remove();
-  }
+  //     afterLastChapterForm
+  //       .getElementsByClassName("btn-add-lesson")[0]
+  //       .addEventListener("click", (e) => {
+  //         addLesson(e);
+  //       });
+  //     $chapterForm
+  //       .querySelector(".btn-chapter-delete")
+  //       .addEventListener("click", (e) => {
+  //         checkFormsLength();
+  //       });
+  //     checkFormsLength();
+  //   });
+  const chapter = await createChapter({
+    chapterTitle: "",
+    lessons: [],
+    chapterNumber: `Chapter ${
+      document.querySelectorAll(".chapter-form").length + 1
+    }.`,
+  });
+  lastChapterForm.insertAdjacentElement("afterend", chapter);
 }
 
 function deleteChapter(e) {
   if (document.querySelectorAll(".chapter-form").length > 1) {
     e.target.closest(".chapter-form").remove();
+    console.log(e.target);
   }
 }
-
-document.querySelectorAll(".btn-add-lecture").forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    addLecture(e);
-  });
-});
 
 document.querySelectorAll(".btn-add").forEach((btn) => {
   btn.addEventListener("click", (e) => {
@@ -114,14 +113,10 @@ document.querySelectorAll(".btn-add").forEach((btn) => {
 document.querySelectorAll(".btn-delete").forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
-    const $lectures = e.target.closest(".lectures");
-    deleteLecture(e);
-    checkLectureLength($lectures);
+    const $lessons = e.target.closest(".lessons");
+    deleteLesson(e);
+    checkLessonLength($lessons);
   });
-});
-
-document.querySelector(".btn-chapter-delete").addEventListener("click", (e) => {
-  deleteChapter(e);
 });
 
 $(".btn-submit").addEventListener("click", (e) => {
@@ -135,20 +130,19 @@ $(".btn-submit").addEventListener("click", (e) => {
     curriculum.push({
       chapterTitle: $chapterForms[i].querySelector(".chapter-title-input")
         .value,
-      lessonCount: $chapterForms[i].querySelectorAll(".lecture-title").length,
+      lessonCount: $chapterForms[i].querySelectorAll(".lesson-title").length,
       lessons: lesson,
     });
     for (
       let k = 0;
-      k < $chapterForms[i].querySelectorAll(".lecture-title").length;
+      k < $chapterForms[i].querySelectorAll(".lesson-title").length;
       k++
     ) {
       let lessonId = nanoid();
       lesson.push({
         lessonId: lessonId,
-        lessonTitle: $chapterForms[i].querySelectorAll(".lecture-title-input")[
-          k
-        ].value,
+        lessonTitle: $chapterForms[i].querySelectorAll(".lesson-title-input")[k]
+          .value,
       });
     }
   }
@@ -162,4 +156,48 @@ $(".btn-submit").addEventListener("click", (e) => {
 $(".back-icon").addEventListener("click", (e) => {
   e.preventDefault();
   window.history.back();
+});
+
+// 강의 데이터 로드
+document.addEventListener("DOMContentLoaded", async () => {
+  const curriculum = loadTempData().curriculum;
+  if (curriculum) {
+    // 세션 스토리지에 데이터가 있을 때
+    const chapterDatas = curriculum.map((chapter, index) => {
+      return {
+        chapterTitle: chapter.chapterTitle,
+        chapterTitleLength: `${chapter.chapterTitle.length} / 50`,
+        chapterNumber: `Chapter ${index + 1}.`,
+        lessons: chapter.lessons,
+        deleteChapter: (e) => {
+          deleteChapter(e);
+        },
+        deleteLesson: (e) => {
+          deleteLesson(e);
+        },
+      };
+    });
+
+    const chapters = await createChapters(chapterDatas);
+    chapters.reverse();
+    chapters.forEach((chapter) => {
+      $(".chapter-info").prepend(chapter);
+    });
+  } else {
+    // 세션 스토리지에 아무것도 없을 때
+    const chapterData = {
+      chapterTitle: "",
+      chapterTitleLength: `0 / 50`,
+      chapterNumber: `Chapter 1.`,
+      lessons: [],
+      deleteChapter: (e) => {
+        deleteChapter(e);
+      },
+      deleteLesson: (e) => {
+        deleteLesson(e);
+      },
+    };
+    const chapter = await createChapter(chapterData);
+    $(".chapter-info").prepend(chapter);
+  }
 });

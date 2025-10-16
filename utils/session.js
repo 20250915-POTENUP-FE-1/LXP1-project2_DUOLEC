@@ -10,7 +10,7 @@ function addTempData(data) {
   sessionStorage.setItem("tempData", JSON.stringify(data));
 }
 
-function modifyTempData() {
+function loadTempData() {
   const data = sessionStorage.getItem("tempData");
   return JSON.parse(data);
 }
@@ -19,4 +19,4 @@ function deleteTempData() {
   sessionStorage.removeItem("tempData");
 }
 
-export { addTempData, modifyTempData, deleteTempData };
+export { addTempData, loadTempData, deleteTempData };
