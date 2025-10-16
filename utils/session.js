@@ -1,0 +1,23 @@
+import { nanoid } from "https://cdn.skypack.dev/nanoid";
+
+function addTempData(data) {
+  const id = nanoid();
+  data.lectureId = id;
+  data.authorId = "seyun0714";
+  data.thmbnail = "assets/thumbnails/thumbnail.png";
+  data.enrollmentCount = 0;
+  data.totalLessons = 0;
+  console.log(data);
+  sessionStorage.setItem("tempData", JSON.stringify(data));
+}
+
+function modifyTempData() {
+  const data = sessionStorage.getItem("tempData");
+  return JSON.parse(data);
+}
+
+function deleteTempData() {
+  sessionStorage.removeItem("tempData");
+}
+
+export { addTempData, modifyTempData, deleteTempData };
