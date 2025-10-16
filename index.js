@@ -1,6 +1,11 @@
 import { $ } from "/utils/common.js";
 import { loadDummyData } from "/utils/load.js";
 import { createCard, createCards } from "/components/card/card.js";
+import {
+  loadStorageData,
+  loadSpecificData,
+  addLocalData,
+} from "./utils/local.js";
 
 let [level, setLevel] = ["전체", (input) => (level = input)];
 let [sort, setSort] = ["인기순", (input) => (sort = input)];
@@ -103,8 +108,7 @@ document.addEventListener("click", (e) => {
 
 // 초기 데이터 로드
 document.addEventListener("DOMContentLoaded", async () => {
-  const lectures =
-    JSON.parse(localStorage.getItem("data")) || (await loadDummyData());
+  const lectures = loadStorageData() || (await loadDummyData());
 
   const cardDatas = lectures.map((lecture) => {
     return {

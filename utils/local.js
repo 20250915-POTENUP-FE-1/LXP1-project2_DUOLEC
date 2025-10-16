@@ -1,14 +1,22 @@
+// 전체 데이터 로드
 function loadStorageData() {
-  console.log(JSON.parse(localStorage.getItem("data")));
   return JSON.parse(localStorage.getItem("data"));
 }
 
-function loadSpecificData(id) {
-  const data = window.localStorage.getItem("data");
+// 특정 강의 데이터만 로드
+function loadSpecificData(lectureId) {
+  const lectures = loadStorageData();
+  return lectures.find((lecture) => lecture.lectureId === lectureId);
 }
 
+// 여러 강의 추가(우선 더미데이터에서만 호출)
+function addLocalDatas(dataList) {
+  dataList.forEach((data) => addLocalData(data));
+}
+
+// 강의 추가
 function addLocalData(data) {
-  const previous = JSON.parse(localStorage.getItem("data"));
+  const previous = loadStorageData();
 
   if (previous) {
     localStorage.setItem("data", JSON.stringify([...previous, data]));
@@ -17,8 +25,35 @@ function addLocalData(data) {
   }
 }
 
-function modifyLocalData() {}
+// 강의 수정
+function modifyLocalData(data) {
+  const previous = loadStorageData();
+  const updated = previous.map((lecture) => {
+    if (lecture.lectureId === data.lectureId) {
+      lecture.title = data.title;
+      lecture.level = data.level;
+      lecture.category = data.category;
+      lecture.description = data.description;
+      lecture.curriculum = data.curriculum;
+      return lecture;
+    }
+    return lecture;
+  });
+  localStorage.setItem("data", JSON.stringify(updated));
+}
 
-function deleteLocalData() {}
+// 강의 삭제
+function deleteLocalData(lectureId) {
+  const previous = loadStorageData();
+  const updated = previous.filter((lecture) => lecture.lectureId !== lectureId);
+  localStorage.setItem("data", JSON.stringify(updated));
+}
 
-export { addLocalData, loadStorageData };
+export {
+  loadStorageData,
+  loadSpecificData,
+  addLocalDatas,
+  addLocalData,
+  modifyLocalData,
+  deleteLocalData,
+};

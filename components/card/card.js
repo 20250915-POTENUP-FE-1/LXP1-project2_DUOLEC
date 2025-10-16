@@ -10,7 +10,7 @@ async function createCard(data) {
     COMPONENT_NAME
   );
 
-  // 텍스트 데이터 바인딩
+  // 데이터 바인딩
   componentLoader.bindMultipleData(cardElement, {
     ".card-title": data.title,
     ".tag-text": data.category,
