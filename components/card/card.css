@@ -1,0 +1,143 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+
+  width: 280px;
+  height: 320px;
+
+  border: 1px solid #33333320;
+  border-radius: 20px;
+  background-color: #78b9ff55;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  z-index: 5;
+
+  width: 30px;
+  height: 30px;
+
+  border: none;
+  background-color: transparent;
+}
+
+.card-menu-options {
+  display: none;
+}
+
+.card-menu-options.visible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+
+  top: calc(100% + 5px);
+  right: -3px;
+  gap: 4px;
+
+  border: 1px solid #c8c8c8;
+  border-radius: 15px;
+}
+
+.menu-label {
+  display: flex;
+  gap: 3px;
+  font-size: 16px;
+  padding: 3px 6px;
+  border-radius: 10px;
+}
+
+.menu-separator {
+  width: 100%;
+  height: 1px;
+  background-color: #c8c8c8;
+}
+
+.card-menu:hover {
+  background-color: #ffffff30;
+}
+.menu-label:hover {
+  background-color: #00000010;
+}
+.card-thumbnail {
+  border: none;
+  outline: none;
+  background-color: #58a7fc55;
+  width: 100%;
+  height: 180px;
+  border-radius: 20px 20px 0 0;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  padding: 0 20px;
+}
+
+.card-tags {
+  width: 100%;
+  padding: 5px 0;
+}
+
+.tag-box {
+  display: inline;
+  position: relative;
+  background-color: #58a7fc55;
+  border-radius: 50px;
+  padding: 0 8px;
+}
+.tag-text {
+  color: #33333380;
+
+  font-size: 12px;
+  position: relative;
+  top: -2px;
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: #33333320;
+}
+
+.card-title {
+  width: 100%;
+  height: 65px;
+
+  padding: 9px 0;
+  white-space: wrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.card-author {
+  width: 100%;
+  font-size: 14px;
+  color: #33333380;
+}
