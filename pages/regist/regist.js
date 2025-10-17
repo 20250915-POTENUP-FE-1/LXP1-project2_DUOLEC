@@ -1,10 +1,8 @@
 import { $ } from "/utils/common.js";
-import { addTempData, modifyTempData } from "/utils/session.js";
-
-const sessionData = JSON.parse(modifyTempData());
-console.log(sessionData);
+import { addTempData, loadTempData } from "/utils/session.js";
 
 function checkSessionData() {
+  const sessionData = loadTempData();
   const $title = $(".title-input");
   const $levels = $(".level-label p");
   const $category = $(".category-label p");
@@ -12,8 +10,14 @@ function checkSessionData() {
   if (sessionStorage.length > 1) {
     $title.value = sessionData.title;
     $levels.innerText = sessionData.level;
-    $category.innerText = sessionData.category.trim();
+    $category.innerText = sessionData.category;
     $description.value = sessionData.description;
+    $(
+      ".category-label p"
+    ).style.cssText = `font-size: 18px; font-weight: 500; color: #333;`;
+    $(
+      ".level-label p"
+    ).style.cssText = `font-size: 18px; font-weight: 500; color: #333;`;
   }
 }
 
@@ -67,7 +71,7 @@ $(".btn-next").addEventListener("click", (e) => {
   e.preventDefault();
   const $titleValue = $(".title-input").value;
   const $levels = $(".level-label p").innerText;
-  const $category = $(".category-label p").innerText;
+  const $category = $(".category-label p").innerText.replace(" ", "");
   const $description = $(".description").value;
   const data = {
     title: $titleValue,
