@@ -8,6 +8,9 @@ function bindData(data) {
   $(".title").textContent = `${data.title}`;
   $(".tag").textContent = `${data.category}`;
   $(".description-text").textContent = `${data.description}`;
+  $(
+    ".main-curriculum-header-count"
+  ).textContent = `챕터 ${data.curriculum.length}개`;
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
