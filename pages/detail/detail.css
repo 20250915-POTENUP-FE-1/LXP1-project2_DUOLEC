@@ -159,9 +159,6 @@ main {
   justify-content: center;
   position: absolute;
 
-  width: 70px;
-  height: 25px;
-
   bottom: 10px;
   left: calc(50% - 35px);
 
@@ -209,84 +206,4 @@ main {
 .main-curriculum-header-count {
   font-size: 16px;
   color: #c8c8c8;
-}
-
-.chapter {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  border-top: 1px solid #c8c8c8;
-}
-
-.chapter.visible .chapter-header {
-  border-bottom: 1px solid #c8c8c8;
-}
-
-.chapter.visible .chapter-lectures {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 100%;
-
-  padding: 20px 30px 20px 30px;
-
-  cursor: pointer;
-}
-
-.chapter-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 20px 28px;
-}
-
-.chapter-header-title {
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.btn-expand-lecture {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: none;
-  background-color: transparent;
-  color: #c8c8c8;
-
-  cursor: pointer;
-
-  gap: 5px;
-}
-
-.btn-expand-lecture:hover {
-  color: black;
-}
-
-.btn-expand-lecture svg {
-  transition: all 0.3s;
-}
-
-.rotate {
-  transform: rotate(180deg);
-}
-
-.chapter-lectures {
-  display: none;
-}
-
-.lecture {
-  padding: 10px 20px;
-}
-
-.lecture-title {
-  color: #c8c8c8;
-}
-
-.lecture:hover .lecture-title {
-  color: black;
 }

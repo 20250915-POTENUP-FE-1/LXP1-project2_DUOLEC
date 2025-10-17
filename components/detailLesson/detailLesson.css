@@ -1,0 +1,11 @@
+.lesson {
+  padding: 10px 20px;
+}
+
+.lesson-title {
+  color: #c8c8c8;
+}
+
+.lesson:hover .lesson-title {
+  color: black;
+}
