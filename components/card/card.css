@@ -114,7 +114,7 @@
   padding: 0 8px;
 }
 .tag-text {
-  color: #33333380;
+  color: #333333aa;
 
   font-size: 12px;
   position: relative;
@@ -140,5 +140,5 @@
 .card-author {
   width: 100%;
   font-size: 14px;
-  color: #33333380;
+  color: #333333aa;
 }

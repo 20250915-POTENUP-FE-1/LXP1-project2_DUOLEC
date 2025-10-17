@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const urlParams = new URLSearchParams(queryString);
   const lectureId = urlParams.get("id");
 
-  const lectureData = loadSpecificData(parseInt(lectureId));
+  const lectureData = loadSpecificData(lectureId);
   bindData(lectureData);
 
   console.log(lectureData);
