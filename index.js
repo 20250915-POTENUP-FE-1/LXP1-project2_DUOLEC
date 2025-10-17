@@ -7,6 +7,7 @@ import { deleteTempData } from "./utils/session.js";
 let [category, setCategory] = ["전체", (input) => (category = input)];
 let [level, setLevel] = ["전체", (input) => (level = input)];
 let [sort, setSort] = ["최신순", (input) => (sort = input)];
+let [search, setSearch] = ["", (input) => (search = input)];
 let lectures = [];
 
 // 헤더의 검색 기능 함수
