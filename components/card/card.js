@@ -11,6 +11,7 @@ async function createCard(data) {
   );
 
   cardElement.querySelector(".card").dataset.lectureId = data.lectureId;
+  cardElement.querySelector(".card").dataset.category = data.category;
 
   // 데이터 바인딩
   componentLoader.bindMultipleData(cardElement, {
