@@ -7,18 +7,7 @@ import { addLocalData } from "/utils/local.js";
 import { deleteTempData, loadTempData } from "/utils/session.js";
 import { nanoid } from "https://cdn.skypack.dev/nanoid";
 
-function updateChapterTilteLength() {
-  let title = $(".chapter-title-input").value;
-  $(".chapter-title-length").innerText = `${title.length} / 50`;
-}
-
-function checkFormsLength() {
-  $(".chapter-length").innerText = `${
-    document.querySelectorAll(".chapter-form").length
-  }개의 챕터`;
-}
-
-function checkLessonLength($lessons) {
+function UpdateLessonLength($lessons) {
   const $lessonList = $lessons.getElementsByClassName("lesson-title");
   $lessons
     .closest(".chapter-lessons")
@@ -27,21 +16,17 @@ function checkLessonLength($lessons) {
     ).innerText = `${$lessonList.length}개의 강의`;
 }
 
-function addLesson(e) {
-  const $lessons = e.target.closest(".lessons");
-  checkLessonLength($lessons);
-  checkLessonLength($lessons);
-}
-
 async function addChapter() {
   const chapterForms = document.querySelectorAll(".chapter-form");
   const lastChapterForm = chapterForms[chapterForms.length - 1];
   const chapter = await createChapter({
     chapterTitle: "",
+    chapterTitleLength: `0 / 50`,
+    chapterNumber: `Chapter ${chapterForms.length + 1}.`,
+    deleteChapter: (e) => {
+      deleteChapter(e);
+    },
     lessons: [],
-    chapterNumber: `Chapter ${
-      document.querySelectorAll(".chapter-form").length + 1
-    }.`,
   });
   lastChapterForm.insertAdjacentElement("afterend", chapter);
 }
@@ -49,7 +34,7 @@ async function addChapter() {
 function deleteChapter(e) {
   if (document.querySelectorAll(".chapter-form").length > 1) {
     e.target.closest(".chapter-form").remove();
-    console.log(e.target);
+    setChapterNumber();
   }
 }
 
@@ -108,9 +93,28 @@ $(".back-icon").addEventListener("click", (e) => {
   window.history.back();
 });
 
+function updateTitleLength() {}
+
+document.querySelectorAll(".chapter-title-input").forEach((input) => {
+  input.addEventListener("input", (e) => {
+    let titleLength = e.target.closest(".chapter-title-input").length;
+    e.target.closest(".chapter-title-length").innerText = `${titleLength} / 50`;
+  });
+});
+
+function setChapterNumber() {
+  const chapters = document.querySelectorAll(".chapter-form");
+  chapters.forEach((chapter, index) => {
+    chapter.querySelector(".chapter-number").innerText = `Chapter ${
+      index + 1
+    }.`;
+  });
+}
+
 // 강의 데이터 로드
 document.addEventListener("DOMContentLoaded", async () => {
   const curriculum = loadTempData().curriculum;
+
   if (curriculum) {
     // 세션 스토리지에 데이터가 있을 때
     const chapterDatas = curriculum.map((chapter, index) => {
@@ -124,9 +128,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         },
         deleteLesson: (e) => {
           deleteLesson(e);
-        },
-        checkChapterLength: () => {
-          updateChapterTilteLength();
         },
       };
     });
@@ -148,9 +149,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       },
       deleteLesson: (e) => {
         deleteLesson(e);
-      },
-      checkChapterLength: () => {
-        updateChapterTilteLength();
       },
     };
     const chapter = await createChapter(chapterData);
