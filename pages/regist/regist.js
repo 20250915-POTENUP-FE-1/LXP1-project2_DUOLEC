@@ -1,18 +1,12 @@
 import { loadSpecificData } from "../../utils/local.js";
-import { $ } from "/utils/common.js";
+import { $, checkQueryString } from "/utils/common.js";
 import {
   addTempData,
   loadTempData,
   modifyTempData,
   deleteTempData,
 } from "/utils/session.js";
-
-function checkQueryString() {
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
-  const lectureId = urlParams.get("id");
-  return lectureId;
-}
+import { nanoid } from "https://cdn.skypack.dev/nanoid";
 
 function checkLocalData(lectureId) {
   const localData = loadSpecificData(lectureId);
@@ -134,8 +128,13 @@ $(".btn-next").addEventListener("click", (e) => {
     if (previous && previous.hasOwnProperty("curriculum")) {
       modifyTempData(data);
     } else {
+      const lecture = loadSpecificData(lectureId);
+      data.lectureId = lecture.lectureId;
       addTempData(data);
-      modifyTempData({ curriculum: loadSpecificData(lectureId).curriculum });
+      modifyTempData({
+        curriculum: lecture.curriculum,
+        createdAt: lecture.createdAt,
+      });
     }
     window.location.href = `/pages/curriculum/curriculum.html?id=${lectureId}`;
   } else {
@@ -143,6 +142,7 @@ $(".btn-next").addEventListener("click", (e) => {
       modifyTempData(data);
       window.location.href = "/pages/curriculum/curriculum.html";
     } else {
+      data.lectureId = nanoid();
       addTempData(data);
       window.location.href = "/pages/curriculum/curriculum.html";
     }

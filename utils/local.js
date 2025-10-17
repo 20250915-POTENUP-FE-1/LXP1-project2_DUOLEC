@@ -27,18 +27,16 @@ function addLocalData(data) {
 
 // 강의 수정
 function modifyLocalData(data) {
-  const previous = loadStorageData();
-  const updated = previous.map((lecture) => {
+  const list = loadStorageData();
+  const updated = list.map((lecture) => {
     if (lecture.lectureId === data.lectureId) {
-      lecture.title = data.title;
-      lecture.level = data.level;
-      lecture.category = data.category;
-      lecture.description = data.description;
-      lecture.curriculum = data.curriculum;
-      return lecture;
+      return data;
     }
     return lecture;
   });
+
+  console.log(updated);
+
   localStorage.setItem("data", JSON.stringify(updated));
 }
 

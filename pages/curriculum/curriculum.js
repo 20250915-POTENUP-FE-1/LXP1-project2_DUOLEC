@@ -2,6 +2,8 @@ import {
   createChapter,
   createChapters,
 } from "../../components/chapter/chapter.js";
+import { checkQueryString } from "../../utils/common.js";
+import { modifyLocalData } from "../../utils/local.js";
 import { $ } from "/utils/common.js";
 import { addLocalData } from "/utils/local.js";
 import { deleteTempData, loadTempData } from "/utils/session.js";
@@ -111,15 +113,17 @@ $(".btn-submit").addEventListener("click", (e) => {
   });
 
   tempData.curriculum = curriculum;
-  // 데이트 세션스토리지에 추가
-  const date = new Date().toISOString();
-  tempData.createdAt = date;
   const totalLesson = document.querySelectorAll(".lesson-title").length;
   tempData.totalLessons = totalLesson;
 
-  console.log(tempData.curriculum);
-
-  addLocalData(tempData);
+  if (checkQueryString()) {
+    console.log(tempData);
+    modifyLocalData(tempData);
+  } else {
+    const date = new Date().toISOString();
+    tempData.createdAt = date;
+    addLocalData(tempData);
+  }
   deleteTempData();
   window.location.href = "/";
 });
@@ -151,6 +155,10 @@ $(".back-icon").addEventListener("click", (e) => {
 
 // 강의 데이터 로드
 document.addEventListener("DOMContentLoaded", async () => {
+  if (checkQueryString()) {
+    $(".btn-submit").textContent = "수정";
+  }
+
   const curriculum = loadTempData().curriculum;
 
   if (curriculum) {

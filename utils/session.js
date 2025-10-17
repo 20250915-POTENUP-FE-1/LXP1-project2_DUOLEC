@@ -1,7 +1,4 @@
-import { nanoid } from "https://cdn.skypack.dev/nanoid";
-
 function addTempData(data) {
-  data.lectureId = nanoid();
   data.authorId = "seyun0714";
   data.thumbnail = "assets/thumbnails/thumbnail.png";
   data.enrollmentCount = 0;
