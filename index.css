@@ -10,7 +10,7 @@ header {
   height: 94px;
   padding: 0 30px;
 
-  border-bottom: 1px solid #cecece;
+  border-bottom: 1px solid #58a7fc7e;
 }
 
 .header-logo {
@@ -45,7 +45,7 @@ header {
 
 .header-search-input:focus {
   outline: none;
-  border: 2px solid black;
+  border: 2px solid #58a7fc7e;
 }
 
 .header-search-button {
@@ -74,16 +74,18 @@ header {
   cursor: pointer;
 
   background-color: transparent;
-  border: none;
+  border: 0px;
   font-size: 16px;
   font-weight: 500;
   text-decoration: none;
   color: #000;
+  transition: all 0.2s;
 }
 
 .header-regist-link:hover {
-  border: 1px solid #cecece;
+  border: 1px solid #58a7fc7e;
   transform: translateY(-1px);
+  color: #58a7fcb7;
 }
 
 /* 카테고리 영역 */
@@ -122,11 +124,7 @@ main {
 }
 
 .main-category-item.selected .main-category-item-icon {
-  background-color: #58a7fc55;
-}
-
-.main-category-item:hover .main-category-item-icon {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #58a7fc38;
 }
 
 .main-category-item-icon {
@@ -157,7 +155,7 @@ main {
   justify-content: flex-start;
 
   width: 1240px;
-  min-height: 600px;
+  /* min-height: 600px; */
 
   padding-top: 100px;
   padding-bottom: 100px;
@@ -218,11 +216,8 @@ main {
 
 .level-options,
 .sort-options {
-  display: none;
-}
+  height: 0px;
 
-.level-options.visible,
-.sort-options.visible {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -234,12 +229,24 @@ main {
 
   background-color: white;
 
-  padding: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s;
+}
 
+.level-options.visible,
+.sort-options.visible {
+  padding: 10px;
   border: 1px solid #c8c8c8;
   border-radius: 15px;
+}
 
-  cursor: pointer;
+.level-options.visible {
+  height: 150px;
+}
+
+.sort-options.visible {
+  height: 80px;
 }
 
 .level-options {
@@ -267,6 +274,10 @@ main {
   border-radius: 10px;
 
   font-size: 16px;
+}
+
+.level-label:not(:first-child) .level-radio {
+  margin-right: 11px;
 }
 
 .level-label:hover,
