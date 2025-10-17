@@ -1,29 +1,46 @@
-import { $ } from "/utils/common.js";
+import { loadSpecificData } from "../../utils/local.js";
+import { $, checkQueryString } from "/utils/common.js";
 import {
   addTempData,
   loadTempData,
   modifyTempData,
   deleteTempData,
 } from "/utils/session.js";
+import { nanoid } from "https://cdn.skypack.dev/nanoid";
 
-function checkSessionData() {
-  const sessionData = loadTempData();
+function checkLocalData(lectureId) {
+  const localData = loadSpecificData(lectureId);
   const $title = $(".title-input");
   const $levels = $(".level-label p");
   const $category = $(".category-label p");
   const $description = $(".description");
-  if (sessionStorage.length > 1) {
-    $title.value = sessionData.title;
-    $levels.innerText = sessionData.level;
-    $category.innerText = sessionData.category;
-    $description.value = sessionData.description;
-    $(
-      ".category-label p"
-    ).style.cssText = `font-size: 18px; font-weight: 500; color: #333;`;
-    $(
-      ".level-label p"
-    ).style.cssText = `font-size: 18px; font-weight: 500; color: #333;`;
-  }
+  $title.value = localData.title;
+  $levels.innerText = localData.level;
+  $category.innerText = localData.category;
+  $description.value = localData.description;
+  $(
+    ".category-label p"
+  ).style.cssText = `font-size: 18px; font-weight: 500; color: #333;`;
+  $(
+    ".level-label p"
+  ).style.cssText = `font-size: 18px; font-weight: 500; color: #333;`;
+}
+
+function checkSessionData(sessionData) {
+  const $title = $(".title-input");
+  const $levels = $(".level-label p");
+  const $category = $(".category-label p");
+  const $description = $(".description");
+  $title.value = sessionData.title;
+  $levels.innerText = sessionData.level;
+  $category.innerText = sessionData.category;
+  $description.value = sessionData.description;
+  $(
+    ".category-label p"
+  ).style.cssText = `font-size: 18px; font-weight: 500; color: #333;`;
+  $(
+    ".level-label p"
+  ).style.cssText = `font-size: 18px; font-weight: 500; color: #333;`;
 }
 
 // 글자 카운팅
@@ -105,14 +122,40 @@ $(".btn-next").addEventListener("click", (e) => {
     description: $description,
   };
 
+  const lectureId = checkQueryString();
   const previous = loadTempData();
-  if (previous && previous.hasOwnProperty("curriculum")) {
-    modifyTempData(data);
-    window.location.href = "/pages/curriculum/curriculum.html";
+  if (lectureId) {
+    if (previous && previous.hasOwnProperty("curriculum")) {
+      modifyTempData(data);
+    } else {
+      const lecture = loadSpecificData(lectureId);
+      data.lectureId = lecture.lectureId;
+      addTempData(data);
+      modifyTempData({
+        curriculum: lecture.curriculum,
+        createdAt: lecture.createdAt,
+      });
+    }
+    window.location.href = `/pages/curriculum/curriculum.html?id=${lectureId}`;
   } else {
-    addTempData(data);
-    window.location.href = "/pages/curriculum/curriculum.html";
+    if (previous && previous.hasOwnProperty("curriculum")) {
+      modifyTempData(data);
+      window.location.href = "/pages/curriculum/curriculum.html";
+    } else {
+      data.lectureId = nanoid();
+      addTempData(data);
+      window.location.href = "/pages/curriculum/curriculum.html";
+    }
   }
 });
 
-checkSessionData();
+document.addEventListener("DOMContentLoaded", (e) => {
+  const lectureId = checkQueryString();
+  const sessionData = loadTempData();
+
+  if (sessionData) {
+    checkSessionData(sessionData);
+  } else if (lectureId) {
+    checkLocalData(lectureId);
+  }
+});

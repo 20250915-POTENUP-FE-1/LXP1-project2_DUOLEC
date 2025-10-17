@@ -1,6 +1,6 @@
 import { createDetailChapters } from "../../components/detailChapter/detailChapter.js";
 import { loadSpecificData } from "../../utils/local.js";
-import { $ } from "/utils/common.js";
+import { $, checkQueryString } from "/utils/common.js";
 
 function bindData(data) {
   $(".author").textContent = `${data.authorId}`;
@@ -14,9 +14,7 @@ function bindData(data) {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
-  const lectureId = urlParams.get("id");
+  const lectureId = checkQueryString();
 
   const lectureData = loadSpecificData(lectureId);
   bindData(lectureData);
