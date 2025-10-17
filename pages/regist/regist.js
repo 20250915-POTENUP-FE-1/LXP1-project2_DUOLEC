@@ -77,7 +77,6 @@ $(".category-label").addEventListener("click", (e) => {
 });
 
 // 로고 클릭시 tempData삭제
-console.log($(".header-logo"));
 $(".header-logo").addEventListener("click", (e) => {
   deleteTempData();
 });

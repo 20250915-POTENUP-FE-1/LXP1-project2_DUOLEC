@@ -142,22 +142,3 @@
   font-size: 14px;
   color: #333333aa;
 }
-
-.card[data-category="Frontend"] {
-  background-color: blue;
-}
-.card[data-category="Backend"] {
-  background-color: blue;
-}
-.card[data-category="DevOps"] {
-  background-color: blue;
-}
-.card[data-category="DataScience"] {
-  background-color: blue;
-}
-.card[data-category="Mobile"] {
-  background-color: blue;
-}
-.card[data-category="AI/ML"] {
-  background-color: blue;
-}
