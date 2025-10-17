@@ -1,5 +1,10 @@
 import { $ } from "/utils/common.js";
-import { addTempData, loadTempData, modifyTempData } from "/utils/session.js";
+import {
+  addTempData,
+  loadTempData,
+  modifyTempData,
+  deleteTempData,
+} from "/utils/session.js";
 
 function checkSessionData() {
   const sessionData = loadTempData();
@@ -54,6 +59,12 @@ $(".category-label").addEventListener("click", (e) => {
   $(".category-select-area svg").classList.toggle("rotate");
 });
 
+// 로고 클릭시 tempData삭제
+console.log($(".header-logo"));
+$(".header-logo").addEventListener("click", (e) => {
+  deleteTempData();
+});
+
 // 카테고리 아코디언 선택
 document.querySelectorAll(".category-content").forEach((level) => {
   level.addEventListener("click", (e) => {
@@ -71,8 +82,22 @@ $(".btn-next").addEventListener("click", (e) => {
   e.preventDefault();
   const $titleValue = $(".title-input").value;
   const $levels = $(".level-label p").innerText;
-  const $category = $(".category-label p").innerText.replace(" ", "");
+  const $category = $(".category-label p").innerText;
   const $description = $(".description").value;
+
+  if (
+    !$titleValue ||
+    !$description ||
+    $levels === "난이도를 선택해주세요." ||
+    $category === "카테고리를 선택해주세요."
+  ) {
+    $(".warning").style.cssText = `opacity: 1`;
+    setTimeout(() => {
+      $(".warning").style.cssText = `opacity: 0`;
+    }, 2000);
+    return;
+  }
+
   const data = {
     title: $titleValue,
     level: $levels,
@@ -83,11 +108,11 @@ $(".btn-next").addEventListener("click", (e) => {
   const previous = loadTempData();
   if (previous && previous.hasOwnProperty("curriculum")) {
     modifyTempData(data);
+    window.location.href = "/pages/curriculum/curriculum.html";
   } else {
     addTempData(data);
+    window.location.href = "/pages/curriculum/curriculum.html";
   }
-
-  window.location.href = "/pages/curriculum/curriculum.html";
 });
 
 checkSessionData();
