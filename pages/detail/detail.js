@@ -2,14 +2,23 @@ import { createDetailChapters } from "../../components/detailChapter/detailChapt
 import { loadSpecificData } from "../../utils/local.js";
 import { $ } from "/utils/common.js";
 
+function bindData(data) {
+  $(".author").textContent = `${data.authorId}`;
+  $(".level").textContent = `난이도: ${data.level}`;
+  $(".title").textContent = `${data.title}`;
+  $(".tag").textContent = `${data.category}`;
+  $(".description-text").textContent = `${data.description}`;
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const lectureId = urlParams.get("id");
 
   const lectureData = loadSpecificData(parseInt(lectureId));
+  bindData(lectureData);
 
-  console.log(lectureData.curriculum);
+  console.log(lectureData);
 
   const chapterData = lectureData.curriculum.map((chapter, index) => {
     return {
