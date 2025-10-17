@@ -66,35 +66,62 @@ $(".header-logo").addEventListener("click", () => {
 $(".btn-submit").addEventListener("click", (e) => {
   e.preventDefault();
   const $chapterForms = document.querySelectorAll(".chapter-form");
+
+  const $chapterTitleInputs = Array.from(
+    document.querySelectorAll(".chapter-title-input")
+  );
+  const $lessonTitleInputs = Array.from(
+    document.querySelectorAll(".lesson-title-input")
+  );
+
+  if (
+    !$chapterTitleInputs.every((chapterTitleInput) =>
+      chapterTitleInput.value.trim()
+    ) ||
+    !$lessonTitleInputs.every((lessonTitleInput) =>
+      lessonTitleInput.value.trim()
+    )
+  ) {
+    $(".warning").style.cssText = `opacity: 1`;
+    setTimeout(() => {
+      $(".warning").style.cssText = `opacity: 0`;
+    }, 2000);
+    return;
+  }
+
   const tempData = loadTempData();
   const curriculum = [];
 
-  for (let i = 0; i < $chapterForms.length; i++) {
-    const lesson = [];
-    curriculum.push({
-      chapterTitle: $chapterForms[i].querySelector(".chapter-title-input")
-        .value,
-      lessonCount: $chapterForms[i].querySelectorAll(".lesson-title").length,
-      lessons: lesson,
-    });
-    for (
-      let k = 0;
-      k < $chapterForms[i].querySelectorAll(".lesson-title").length;
-      k++
-    ) {
-      let lessonId = nanoid();
-      lesson.push({
+  $chapterForms.forEach((chapterForm) => {
+    const lessons = [];
+    const $lessons = chapterForm.querySelectorAll(".lesson-title");
+    $lessons.forEach((lesson) => {
+      const lessonId = nanoid();
+      lessons.push({
         lessonId: lessonId,
-        lessonTitle: $chapterForms[i].querySelectorAll(".lesson-title-input")[k]
-          .value,
+        lessonTitle: lesson.querySelector(".lesson-title-input").value,
       });
-    }
-  }
+    });
+
+    curriculum.push({
+      chapterTitle: chapterForm.querySelector(".chapter-title-input").value,
+      lessonCount: chapterForm.querySelectorAll(".lesson-title").length,
+      lessons: lessons,
+    });
+  });
+
   tempData.curriculum = curriculum;
+  // 데이트 세션스토리지에 추가
+  const date = new Date().toISOString();
+  tempData.createdAt = date;
+  const totalLesson = document.querySelectorAll(".lesson-title").length;
+  tempData.totalLessons = totalLesson;
+
+  console.log(tempData.curriculum);
 
   addLocalData(tempData);
   deleteTempData();
-  window.location.href = "/index.html";
+  window.location.href = "/";
 });
 
 // 뒤로가기 기능
