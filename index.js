@@ -58,7 +58,7 @@ async function loadCards() {
         openCardMenu(e);
       },
       onModifyClick: (e) => {
-        console.log("수정 클릭");
+        window.location.href = `/pages/regist/regist.html?id=${lecture.lectureId}`;
       },
       onDeleteClick: (e) => {
         deleteLecture(e);
