@@ -10,6 +10,8 @@ async function createCard(data) {
     COMPONENT_NAME
   );
 
+  cardElement.querySelector(".card").dataset.lectureId = data.lectureId;
+
   // 데이터 바인딩
   componentLoader.bindMultipleData(cardElement, {
     ".card-title": data.title,
@@ -17,8 +19,6 @@ async function createCard(data) {
     ".card-author": data.authorId,
     ".card-thumbnail": { property: "src", value: data.thumbnail },
   });
-
-  // 클릭 이벤트 연결
 
   // 카드 클릭 이벤트
   componentLoader.attachEvent(cardElement, ".card", "click", data.onCardClick);

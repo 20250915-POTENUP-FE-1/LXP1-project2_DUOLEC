@@ -1,16 +1,29 @@
 import { $ } from "/utils/common.js";
 import { loadDummyData } from "/utils/load.js";
 import { createCards } from "/components/card/card.js";
-import { loadStorageData } from "./utils/local.js";
+import { deleteLocalData, loadStorageData } from "./utils/local.js";
 
 let [category, setCategory] = ["전체", (input) => (category = input)];
 let [level, setLevel] = ["전체", (input) => (level = input)];
 let [sort, setSort] = ["인기순", (input) => (sort = input)];
+let [search, setSearch] = ["", (input) => (search = input)];
 let lectures = [];
+
+// 헤더의 검색 기능 함수
+function handleSearch() {
+  const input = $(".header-search-input").value;
+  setSearch(input);
+  loadCards();
+}
 
 // 필터링 조건에 맞는 카드 로드 함수(초기에는 전체 로드)
 async function loadCards() {
   let filtered = lectures;
+  if (search.trim()) {
+    filtered = filtered.filter((lecture) =>
+      lecture.title.toLowerCase().includes(search.toLowerCase())
+    );
+  }
   if (category !== "전체") {
     filtered = filtered.filter((lecture) => lecture.category === category);
   }
@@ -46,7 +59,7 @@ async function loadCards() {
         console.log("수정 클릭");
       },
       onDeleteClick: (e) => {
-        console.log("삭제 클릭");
+        deleteLecture(e);
       },
     };
   });
@@ -63,6 +76,17 @@ function deleteCards() {
   document
     .querySelectorAll(".card")
     .forEach((card) => card.parentElement.remove());
+}
+
+// 특정 강의 삭제 함수
+function deleteLecture(e) {
+  const $target = e.target.closest(".card");
+  const title = $target.querySelector(".card-title").textContent;
+  if (window.confirm(`정말 ${title} 강의를 삭제하시겠습니까?`)) {
+    deleteLocalData($target.dataset.lectureId);
+    alert(`${title} 강의가 정상적으로 삭제되었습니다.`);
+    window.location.reload();
+  }
 }
 
 // 카테고리 선택 함수
@@ -137,6 +161,17 @@ $(".btn-level").addEventListener("click", (e) => {
 $(".btn-sort").addEventListener("click", (e) => {
   e.preventDefault();
   toggleSortFilter();
+});
+
+// 헤더 검색 버튼 클릭 이벤트 등록
+$(".header-search-button").addEventListener("click", () => {
+  handleSearch();
+});
+
+$(".header-search-input").addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    handleSearch();
+  }
 });
 
 document.querySelectorAll(".main-category-item").forEach(($category) => {
