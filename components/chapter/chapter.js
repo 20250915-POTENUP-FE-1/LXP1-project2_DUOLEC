@@ -1,6 +1,5 @@
 import { createLesson, createLessons } from "../lesson/lesson.js";
 import { componentLoader } from "/components/componentLoader.js";
-import { $ } from "/utils/common.js";
 
 const COMPONENT_PATH = "/components";
 const COMPONENT_NAME = "chapter";
@@ -11,6 +10,22 @@ async function createChapter(data) {
     COMPONENT_PATH,
     COMPONENT_NAME
   );
+
+  function deleteLesson(e) {
+    const lessons = chapterElement.querySelectorAll(".lesson-title");
+    if (lessons.length > 1) {
+      e.target.closest(".lesson-title").remove();
+    }
+    setLessonNumber();
+  }
+
+  function setLessonNumber() {
+    const lessonsNumber = chapterElement.querySelector(".lesson-length");
+    const lessons = chapterElement.querySelectorAll(".lesson-title");
+
+    lessonsNumber.innerText = `${lessons.length}개의 강의`;
+  }
+
   componentLoader.bindMultipleData(chapterElement, {
     ".chapter-title-input": { property: "value", value: data.chapterTitle },
     ".chapter-title-length": data.chapterTitleLength,
@@ -30,8 +45,14 @@ async function createChapter(data) {
     async () => {
       const lesson = await createLesson({
         lessonTitle: "",
+        deleteLesson: (e) => {
+          deleteLesson(e);
+        },
       });
+      const lessons = chapterElement.querySelectorAll(".lesson-title");
+
       chapterElement.querySelector(".lessons").appendChild(lesson);
+      setLessonNumber();
     }
   );
 
@@ -57,10 +78,22 @@ async function createChapter(data) {
   if (!data.lessons.length) {
     const lesson = await createLesson({
       lessonTitle: "",
+      deleteLesson: (e) => {
+        deleteLesson(e);
+      },
     });
+
     chapterElement.querySelector(".lessons").appendChild(lesson);
   } else {
-    const lessons = await createLessons(data.lessons);
+    const lessonsData = data.lessons.map((lesson) => {
+      return {
+        lessonTitle: lesson.lessonTitle,
+        deleteLesson: (e) => {
+          deleteLesson(e);
+        },
+      };
+    });
+    const lessons = await createLessons(lessonsData);
     lessons.forEach((lesson) => {
       chapterElement.querySelector(".lessons").appendChild(lesson);
     });

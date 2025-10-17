@@ -17,11 +17,12 @@ async function createLesson(data) {
     "value"
   );
 
-  //강의 삭제 클릭 이벤트
-  componentLoader.attachEvent(lessonElement, ".btn-delete", "click", () => {
-    lessonElement.querySelector(".lesson-title").remove();
-  });
-
+  componentLoader.attachEvent(
+    lessonElement,
+    ".btn-delete",
+    "click",
+    data.deleteLesson
+  );
   return lessonElement;
 }
 

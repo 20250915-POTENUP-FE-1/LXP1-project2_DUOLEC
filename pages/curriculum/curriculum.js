@@ -7,15 +7,6 @@ import { addLocalData } from "/utils/local.js";
 import { deleteTempData, loadTempData } from "/utils/session.js";
 import { nanoid } from "https://cdn.skypack.dev/nanoid";
 
-function UpdateLessonLength($lessons) {
-  const $lessonList = $lessons.getElementsByClassName("lesson-title");
-  $lessons
-    .closest(".chapter-lessons")
-    .querySelector(
-      ".lesson-length"
-    ).innerText = `${$lessonList.length}개의 강의`;
-}
-
 async function addChapter() {
   const chapterForms = document.querySelectorAll(".chapter-form");
   const lastChapterForm = chapterForms[chapterForms.length - 1];
@@ -38,19 +29,19 @@ function deleteChapter(e) {
   }
 }
 
+function setChapterNumber() {
+  const chapters = document.querySelectorAll(".chapter-form");
+  chapters.forEach((chapter, index) => {
+    chapter.querySelector(".chapter-number").innerText = `Chapter ${
+      index + 1
+    }.`;
+  });
+}
+
 document.querySelectorAll(".btn-add").forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
     addChapter();
-  });
-});
-
-document.querySelectorAll(".btn-delete").forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    const $lessons = e.target.closest(".lessons");
-    deleteLesson(e);
-    checkLessonLength($lessons);
   });
 });
 
@@ -93,23 +84,12 @@ $(".back-icon").addEventListener("click", (e) => {
   window.history.back();
 });
 
-function updateTitleLength() {}
-
 document.querySelectorAll(".chapter-title-input").forEach((input) => {
   input.addEventListener("input", (e) => {
     let titleLength = e.target.closest(".chapter-title-input").length;
     e.target.closest(".chapter-title-length").innerText = `${titleLength} / 50`;
   });
 });
-
-function setChapterNumber() {
-  const chapters = document.querySelectorAll(".chapter-form");
-  chapters.forEach((chapter, index) => {
-    chapter.querySelector(".chapter-number").innerText = `Chapter ${
-      index + 1
-    }.`;
-  });
-}
 
 // 강의 데이터 로드
 document.addEventListener("DOMContentLoaded", async () => {
@@ -125,9 +105,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         lessons: chapter.lessons,
         deleteChapter: (e) => {
           deleteChapter(e);
-        },
-        deleteLesson: (e) => {
-          deleteLesson(e);
         },
       };
     });
@@ -147,10 +124,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       deleteChapter: (e) => {
         deleteChapter(e);
       },
-      deleteLesson: (e) => {
-        deleteLesson(e);
-      },
     };
+
     const chapter = await createChapter(chapterData);
     $(".chapter-info").prepend(chapter);
   }
