@@ -27,11 +27,7 @@ async function createLesson(data) {
 }
 
 async function createLessons(dataArray) {
-  return Promise.all(
-    dataArray.map((data) => {
-      createLesson(data);
-    })
-  );
+  return Promise.all(dataArray.map((data) => createLesson(data)));
 }
 
 export { createLesson, createLessons };

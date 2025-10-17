@@ -1,5 +1,5 @@
 import { $ } from "/utils/common.js";
-import { addTempData, loadTempData } from "/utils/session.js";
+import { addTempData, loadTempData, modifyTempData } from "/utils/session.js";
 
 function checkSessionData() {
   const sessionData = loadTempData();
@@ -79,7 +79,14 @@ $(".btn-next").addEventListener("click", (e) => {
     category: $category,
     description: $description,
   };
-  addTempData(data);
+
+  const previous = loadTempData();
+  if (previous && previous.hasOwnProperty("curriculum")) {
+    modifyTempData(data);
+  } else {
+    addTempData(data);
+  }
+
   window.location.href = "/pages/curriculum/curriculum.html";
 });
 
