@@ -96,6 +96,25 @@ $(".btn-submit").addEventListener("click", (e) => {
 // 뒤로가기 기능
 $(".back-icon").addEventListener("click", (e) => {
   e.preventDefault();
+  const sessionData = JSON.parse(sessionStorage.getItem("tempData"));
+  const $chapterForms = document.querySelectorAll(".chapter-form");
+  sessionData.curriculum = [];
+
+  $chapterForms.forEach((form) => {
+    const lessons = Array.from(
+      form.querySelectorAll(".lesson-title-input")
+    ).map((lesson) => ({
+      lessonId: nanoid(),
+      lessonTitle: lesson.value,
+    }));
+    sessionData.curriculum.push({
+      chapterTitle: `${form.querySelector(".chapter-title-input").value}`,
+      lessonCount: form.querySelectorAll(".lesson-title").length,
+      lessons: lessons,
+    });
+  });
+
+  sessionStorage.setItem("tempData", JSON.stringify(sessionData));
   window.history.back();
 });
 

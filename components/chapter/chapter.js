@@ -49,8 +49,6 @@ async function createChapter(data) {
           deleteLesson(e);
         },
       });
-      const lessons = chapterElement.querySelectorAll(".lesson-title");
-
       chapterElement.querySelector(".lessons").appendChild(lesson);
       setLessonNumber();
     }
