@@ -23,7 +23,7 @@ async function createDetailChapter(data) {
 
   componentLoader.attachEvent(
     element,
-    ".btn-expand-lesson",
+    ".chapter-header",
     "click",
     toggleChapter
   );
