@@ -2,6 +2,7 @@ import { $ } from "/utils/common.js";
 import { loadDummyData } from "/utils/load.js";
 import { createCards } from "/components/card/card.js";
 import { loadStorageData } from "./utils/local.js";
+import { deleteTempData } from "./utils/session.js";
 
 let [category, setCategory] = ["전체", (input) => (category = input)];
 let [level, setLevel] = ["전체", (input) => (level = input)];
@@ -127,6 +128,10 @@ function openCardMenu(e) {
   const $cardMenuOptions = $card.getElementsByClassName("card-menu-options")[0];
   $cardMenuOptions.classList.add("visible");
 }
+
+$(".header-logo").addEventListener("click", () => {
+  deleteTempData();
+});
 
 // 난이도 필터 버튼 온오프 클릭 이벤트 등록
 $(".btn-level").addEventListener("click", (e) => {
