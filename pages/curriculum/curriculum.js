@@ -45,14 +45,14 @@ document.querySelectorAll(".btn-add").forEach((btn) => {
   });
 });
 
-document.querySelectorAll(".btn-delete").forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    const $lessons = e.target.closest(".lessons");
-    deleteLesson(e);
-    checkLessonLength($lessons);
-  });
-});
+// document.querySelectorAll(".btn-delete").forEach((btn) => {
+//   btn.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     const $lessons = e.target.closest(".lessons");
+//     deleteLesson(e);
+//     checkLessonLength($lessons);
+//   });
+// });
 
 $(".btn-submit").addEventListener("click", (e) => {
   e.preventDefault();
@@ -93,8 +93,6 @@ $(".back-icon").addEventListener("click", (e) => {
   window.history.back();
 });
 
-function updateTitleLength() {}
-
 document.querySelectorAll(".chapter-title-input").forEach((input) => {
   input.addEventListener("input", (e) => {
     let titleLength = e.target.closest(".chapter-title-input").length;
@@ -126,9 +124,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         deleteChapter: (e) => {
           deleteChapter(e);
         },
-        deleteLesson: (e) => {
-          deleteLesson(e);
-        },
       };
     });
 
@@ -147,10 +142,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       deleteChapter: (e) => {
         deleteChapter(e);
       },
-      deleteLesson: (e) => {
-        deleteLesson(e);
-      },
     };
+
     const chapter = await createChapter(chapterData);
     $(".chapter-info").prepend(chapter);
   }
