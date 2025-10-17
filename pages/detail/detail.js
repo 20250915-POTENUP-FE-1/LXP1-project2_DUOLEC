@@ -2,13 +2,6 @@ import { createDetailChapters } from "../../components/detailChapter/detailChapt
 import { loadSpecificData } from "../../utils/local.js";
 import { $ } from "/utils/common.js";
 
-function toggleChapter(e) {
-  const $clickedChapter = e.target.closest(".chapter");
-  $clickedChapter.classList.toggle("visible");
-  const $icon = $clickedChapter.querySelector("i");
-  $icon.classList.toggle("rotate");
-}
-
 document.addEventListener("DOMContentLoaded", async () => {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
@@ -23,7 +16,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       chapterTitle: `Chapter ${index + 1}. ${chapter.chapterTitle}`,
       lessonCount: `강의 ${chapter.lessonCount}개`,
       lessons: chapter.lessons,
-      onChapterClick: (e) => toggleChapter(e),
     };
   });
 

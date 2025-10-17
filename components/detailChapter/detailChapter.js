@@ -10,6 +10,12 @@ async function createDetailChapter(data) {
     COMPONENT_NAME
   );
 
+  function toggleChapter() {
+    element.classList.toggle("visible");
+    const $icon = element.querySelector("i");
+    $icon.classList.toggle("rotate");
+  }
+
   componentLoader.bindMultipleData(element, {
     ".chapter-header-title": data.chapterTitle,
     ".chapter-lesson-count": data.lessonCount,
@@ -19,7 +25,7 @@ async function createDetailChapter(data) {
     element,
     ".btn-expand-lesson",
     "click",
-    data.onChapterClick
+    toggleChapter
   );
 
   const lessonData = data.lessons.map((lesson, index) => {
