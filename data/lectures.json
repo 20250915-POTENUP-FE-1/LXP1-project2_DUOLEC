@@ -1,7 +1,7 @@
 [
   {
     "createdAt": "2025-08-21T00:02:35.254808+09:00",
-    "lectureId": 1001,
+    "lectureId": "7bo9pQnhPe4R4df--o30S",
     "authorId": "seyun0714",
     "title": "React LXP 플랫폼 구축",
     "description": "LXP 플랫폼 구축의 A to Z를 다루는 최고의 React 강의입니다. 실무 역량을 키워보세요.",
@@ -16,15 +16,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2001,
+            "lessonId": "MTYYH4uoZHjo3Me8Dd492",
             "lessonTitle": "React 개발 환경 설정"
           },
           {
-            "lessonId": 2002,
+            "lessonId": "_lOMtGfb0sa8zTPRdDBgL",
             "lessonTitle": "JSX와 컴포넌트 기초"
           },
           {
-            "lessonId": 2003,
+            "lessonId": "zWJuc-UFhwc0jp3QixvQd",
             "lessonTitle": "Props와 State의 이해"
           }
         ]
@@ -34,19 +34,19 @@
         "lessonCount": 4,
         "lessons": [
           {
-            "lessonId": 2004,
+            "lessonId": "VGuM88futAFT0P2CRNqrc",
             "lessonTitle": "React Hooks: useState와 useEffect"
           },
           {
-            "lessonId": 2005,
+            "lessonId": "GzM9Z_fm7WrNi4RSDHnAc",
             "lessonTitle": "상태 관리 라이브러리 (Redux Toolkit)"
           },
           {
-            "lessonId": 2006,
+            "lessonId": "oIsT42mkppyxCB0pzHHQM",
             "lessonTitle": "Redux를 이용한 전역 상태 관리 실습"
           },
           {
-            "lessonId": 2007,
+            "lessonId": "j4_GCGGozFiHBWJYFiWPJ",
             "lessonTitle": "챕터 2 퀴즈"
           }
         ]
@@ -56,15 +56,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2008,
+            "lessonId": "Wxez0-UEosy8m3IiF5c_J",
             "lessonTitle": "API 연동과 비동기 처리"
           },
           {
-            "lessonId": 2009,
+            "lessonId": "opDM3m10zdU6YWrHudrXj",
             "lessonTitle": "컴포넌트 설계 및 구현"
           },
           {
-            "lessonId": 2010,
+            "lessonId": "0jYcAuO_3zgf1kRwKWenP",
             "lessonTitle": "프로젝트 배포하기"
           }
         ]
@@ -73,7 +73,7 @@
   },
   {
     "createdAt": "2025-08-23T16:28:53.254808+09:00",
-    "lectureId": 1002,
+    "lectureId": "BTXcS1fTIGhhRHR2tJQ33",
     "authorId": "seyun0714",
     "title": "Vue.js로 만드는 인터랙티브 웹",
     "description": "Vue.js의 핵심 개념을 배우고 실시간 채팅 애플리케이션을 만들어보는 실전 프로젝트 강의입니다.",
@@ -88,15 +88,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2011,
+            "lessonId": "zxtai1CNln7kaDHTNmqXF",
             "lessonTitle": "Vue 인스턴스와 템플릿 문법"
           },
           {
-            "lessonId": 2012,
+            "lessonId": "f-ePA-DLha8A4ilvxzK85",
             "lessonTitle": "첫 Vue 컴포넌트 만들기"
           },
           {
-            "lessonId": 2013,
+            "lessonId": "x5HKR8fGBKsFKuXgqFBJf",
             "lessonTitle": "Computed와 Watch"
           }
         ]
@@ -106,11 +106,11 @@
         "lessonCount": 2,
         "lessons": [
           {
-            "lessonId": 2014,
+            "lessonId": "kSbZtN00j7se_Jm9JfeaT",
             "lessonTitle": "컴포넌트 통신 (Props & Emit)"
           },
           {
-            "lessonId": 2015,
+            "lessonId": "6CIOoW8mCyrcVRFNEf2kn",
             "lessonTitle": "슬롯(Slot)을 이용한 컨텐츠 배포"
           }
         ]
@@ -120,15 +120,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2016,
+            "lessonId": "fBLLS74a_PRrXFbbsVdkO",
             "lessonTitle": "Vuex를 이용한 상태 관리"
           },
           {
-            "lessonId": 2017,
+            "lessonId": "8eDVctc_nWuwDXtMpCKOM",
             "lessonTitle": "WebSocket 통신 구현"
           },
           {
-            "lessonId": 2018,
+            "lessonId": "IUm2HvGpPcbkUDpU00QCQ",
             "lessonTitle": "UI 구현 및 최종 테스트"
           }
         ]
@@ -137,7 +137,7 @@
   },
   {
     "createdAt": "2025-08-18T17:00:28.254808+09:00",
-    "lectureId": 1003,
+    "lectureId": "bn0uxis6wNtmuszBtOdIR",
     "authorId": "seyun0714",
     "title": "TypeScript, 실무의 정석",
     "description": "JavaScript에 타입을 더해 버그를 줄이고 코드 품질을 높이는 TypeScript의 모든 것을 알려드립니다.",
@@ -152,11 +152,11 @@
         "lessonCount": 2,
         "lessons": [
           {
-            "lessonId": 2019,
+            "lessonId": "arlf8pM_AGgUTlgdIP57p",
             "lessonTitle": "왜 타입스크립트인가?"
           },
           {
-            "lessonId": 2020,
+            "lessonId": "s_6Hl8lnRrAU8-Jz7ttBB",
             "lessonTitle": "기본 타입과 인터페이스"
           }
         ]
@@ -166,15 +166,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2021,
+            "lessonId": "LDkEmnGLM_DJZqQwyF6k1",
             "lessonTitle": "Union, Intersection 타입"
           },
           {
-            "lessonId": 2022,
+            "lessonId": "9HQsk7_NXxx3in8eBiPUn",
             "lessonTitle": "제네릭(Generic)의 이해와 활용"
           },
           {
-            "lessonId": 2023,
+            "lessonId": "RYIrIl6229JPDQXInedk8",
             "lessonTitle": "타입 가드와 타입 단언"
           }
         ]
@@ -184,11 +184,11 @@
         "lessonCount": 2,
         "lessons": [
           {
-            "lessonId": 2024,
+            "lessonId": "efrTvG8bj9FQO7K38rFgK",
             "lessonTitle": "함수형 컴포넌트에 타입 적용하기"
           },
           {
-            "lessonId": 2025,
+            "lessonId": "ZJk5NTKbCUejSvbJuN_sE",
             "lessonTitle": "Props와 State 타입 정의"
           }
         ]
@@ -197,7 +197,7 @@
   },
   {
     "createdAt": "2025-08-23T00:09:09.254808+09:00",
-    "lectureId": 1004,
+    "lectureId": "3MIc1Uj58GppUuf7VXiEN",
     "authorId": "seyun0714",
     "title": "웹 접근성 A to Z",
     "description": "모두를 위한 웹을 만드는 방법! 시맨틱 마크업부터 WAI-ARIA까지 웹 접근성의 모든 것을 다룹니다.",
@@ -212,15 +212,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2026,
+            "lessonId": "H3VYYhr3CjTIM9f7n2KmL",
             "lessonTitle": "웹 접근성이란 무엇인가?"
           },
           {
-            "lessonId": 2027,
+            "lessonId": "uEB9tfn7jwMCt0n6J8G-U",
             "lessonTitle": "시맨틱 마크업의 중요성"
           },
           {
-            "lessonId": 2028,
+            "lessonId": "CcQl1u6ld3HyfLka5wdg5",
             "lessonTitle": "WCAG 가이드라인 살펴보기"
           }
         ]
@@ -230,15 +230,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2029,
+            "lessonId": "-Q8oBbrkSLdaqVp-dfN9V",
             "lessonTitle": "ARIA Roles, States, Properties"
           },
           {
-            "lessonId": 2030,
+            "lessonId": "JT8oRunfOy5TAWdNjI2dC",
             "lessonTitle": "키보드 접근성 향상시키기"
           },
           {
-            "lessonId": 2031,
+            "lessonId": "LWzg-rofF0y-t17OmV81I",
             "lessonTitle": "스크린 리더 테스트"
           }
         ]
@@ -247,7 +247,7 @@
   },
   {
     "createdAt": "2025-08-20T17:20:14.254808+09:00",
-    "lectureId": 1005,
+    "lectureId": "XpFOU0wlCIQyLL1V1g5nU",
     "authorId": "seyun0714",
     "title": "Node.js로 구현하는 마이크로서비스 아키텍처",
     "description": "확장 가능하고 유지보수가 용이한 MSA(Microservices Architecture)를 Node.js와 Express로 구축합니다.",
@@ -262,15 +262,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2032,
+            "lessonId": "lzStOcP0oMO6gQER96tVv",
             "lessonTitle": "MSA 개념과 장단점"
           },
           {
-            "lessonId": 2033,
+            "lessonId": "MacekHNGLWvAYhc93NibI",
             "lessonTitle": "첫 Express 서비스 만들기"
           },
           {
-            "lessonId": 2034,
+            "lessonId": "XiAPtxhn1OcClFYVQV82R",
             "lessonTitle": "RESTful API 설계 원칙"
           }
         ]
@@ -280,15 +280,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2035,
+            "lessonId": "chBtIe4ZMNorfWWhPLIXa",
             "lessonTitle": "API Gateway 구현"
           },
           {
-            "lessonId": 2036,
+            "lessonId": "GzzThS9eXXiNqInFhCojN",
             "lessonTitle": "Sync vs Async 통신"
           },
           {
-            "lessonId": 2037,
+            "lessonId": "l8BcaIXFKeTj7HbCBbf47",
             "lessonTitle": "메시지 큐 (RabbitMQ) 연동"
           }
         ]
@@ -298,19 +298,19 @@
         "lessonCount": 4,
         "lessons": [
           {
-            "lessonId": 2038,
+            "lessonId": "NGNfnga-k-rw9EY2OOcOV",
             "lessonTitle": "Docker를 이용한 서비스 컨테이너화"
           },
           {
-            "lessonId": 2039,
+            "lessonId": "hKpQHiW55Am3_GWEAWF23",
             "lessonTitle": "Docker Compose로 로컬 환경 구축"
           },
           {
-            "lessonId": 2040,
+            "lessonId": "OEpUCedh2LISW5Rz-UBrm",
             "lessonTitle": "데이터베이스 관리 전략"
           },
           {
-            "lessonId": 2041,
+            "lessonId": "puNlVf_e6dYRPNvrBUI58",
             "lessonTitle": "MSA 챕터 퀴즈"
           }
         ]
@@ -320,11 +320,11 @@
         "lessonCount": 2,
         "lessons": [
           {
-            "lessonId": 2042,
+            "lessonId": "QD5CN4vffiwttj_-S6k6i",
             "lessonTitle": "분산 로깅 시스템 구축"
           },
           {
-            "lessonId": 2043,
+            "lessonId": "cutGphZUXlpsYGgbbLxcr",
             "lessonTitle": "모니터링과 트레이싱"
           }
         ]
@@ -333,7 +333,7 @@
   },
   {
     "createdAt": "2025-08-24T16:06:16.254808+09:00",
-    "lectureId": 1006,
+    "lectureId": "Fyq9RQt9P_6064_an4kro",
     "authorId": "seyun0714",
     "title": "Spring Boot와 JPA를 활용한 웹 애플리케이션 개발",
     "description": "Java 백엔드 개발의 표준, Spring Boot와 JPA를 이용해 게시판 서비스를 만들어보는 실전 강좌입니다.",
@@ -348,15 +348,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2044,
+            "lessonId": "vzlxfFpD_nlCex3893f9a",
             "lessonTitle": "개발 환경 설정 및 프로젝트 생성"
           },
           {
-            "lessonId": 2045,
+            "lessonId": "phJ6CtsT_8DaHiOpIEBH4",
             "lessonTitle": "Hello World API 만들기"
           },
           {
-            "lessonId": 2046,
+            "lessonId": "3trYPU8nDxM7SX-sWj3GX",
             "lessonTitle": "Spring Boot의 구조"
           }
         ]
@@ -366,15 +366,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2047,
+            "lessonId": "M_gQbF8AZwPYY94aBlYO_",
             "lessonTitle": "JPA와 영속성 컨텍스트"
           },
           {
-            "lessonId": 2048,
+            "lessonId": "3Ftb4N10RvBXEjeVrWKuj",
             "lessonTitle": "Entity 설계 및 Repository 생성"
           },
           {
-            "lessonId": 2049,
+            "lessonId": "N0Q7VZPdy0YJ4QkurDoYm",
             "lessonTitle": "QueryDSL로 동적 쿼리 작성"
           }
         ]
@@ -384,15 +384,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2050,
+            "lessonId": "ZbwIZOi2ShDGRAMZtM0f4",
             "lessonTitle": "게시글 CRUD API 구현"
           },
           {
-            "lessonId": 2051,
+            "lessonId": "0CBlo9S6nGaXDaE8J2nOj",
             "lessonTitle": "Spring Security를 이용한 인증/인가"
           },
           {
-            "lessonId": 2052,
+            "lessonId": "8BbgQXc-X_8HheTUoLmC6",
             "lessonTitle": "단위 테스트와 통합 테스트"
           }
         ]
@@ -401,7 +401,7 @@
   },
   {
     "createdAt": "2025-08-23T04:32:02.254808+09:00",
-    "lectureId": 1007,
+    "lectureId": "JyuBg1ALq5z0vZXbXJVEJ",
     "authorId": "seyun0714",
     "title": "Django로 시작하는 파이썬 웹 프로그래밍",
     "description": "Python의 대표 웹 프레임워크 Django를 사용하여 빠르고 안전한 웹사이트를 개발하는 방법을 배웁니다.",
@@ -416,15 +416,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2053,
+            "lessonId": "-Qws81hBUy817e9CaE55F",
             "lessonTitle": "Django 설치와 프로젝트 구조"
           },
           {
-            "lessonId": 2054,
+            "lessonId": "WPbjHMU3MlGUWyFHl8DLv",
             "lessonTitle": "MTV 패턴의 이해"
           },
           {
-            "lessonId": 2055,
+            "lessonId": "_ILTL0MoTWJf5ax_ew343",
             "lessonTitle": "URL과 View 연결하기"
           }
         ]
@@ -434,11 +434,11 @@
         "lessonCount": 2,
         "lessons": [
           {
-            "lessonId": 2056,
+            "lessonId": "Lu2HhSMQhMT2BEwJRdbPw",
             "lessonTitle": "Django ORM과 모델 정의"
           },
           {
-            "lessonId": 2057,
+            "lessonId": "Bs8P8JddspAdOS0MkxTrE",
             "lessonTitle": "Admin 사이트 활용"
           }
         ]
@@ -448,11 +448,11 @@
         "lessonCount": 2,
         "lessons": [
           {
-            "lessonId": 2058,
+            "lessonId": "aL8uLSVXuQ9qllBpmnBDc",
             "lessonTitle": "템플릿 시스템과 폼 처리"
           },
           {
-            "lessonId": 2059,
+            "lessonId": "MUjy21Z_hWAWz9pPSzrcv",
             "lessonTitle": "정적 파일 관리"
           }
         ]
@@ -461,7 +461,7 @@
   },
   {
     "createdAt": "2025-08-23T10:30:33.254808+09:00",
-    "lectureId": 1008,
+    "lectureId": "Ckj9tJjOV9Rb27tK20d5a",
     "authorId": "seyun0714",
     "title": "Go와 Gin을 이용한 고성능 API 서버 구축",
     "description": "빠르고 간결한 Go 언어와 웹 프레임워크 Gin을 사용하여 고성능 API 서버를 구축하는 방법을 학습합니다.",
@@ -476,15 +476,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2060,
+            "lessonId": "mwGaR6T_cd7lxoP3KJ2Qo",
             "lessonTitle": "Go 개발 환경 설정과 기본 문법"
           },
           {
-            "lessonId": 2061,
+            "lessonId": "24F7kdrHUuTOedkPaMIdS",
             "lessonTitle": "고루틴과 채널"
           },
           {
-            "lessonId": 2062,
+            "lessonId": "5oPHg3u0DycCMfbAsm0Uq",
             "lessonTitle": "인터페이스와 구조체"
           }
         ]
@@ -494,15 +494,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2063,
+            "lessonId": "TKT93cioHnWAuMYkbeHbB",
             "lessonTitle": "Gin 라우팅과 미들웨어"
           },
           {
-            "lessonId": 2064,
+            "lessonId": "DrclHWgw7UnvW4yGzay4s",
             "lessonTitle": "Request/Response 처리"
           },
           {
-            "lessonId": 2065,
+            "lessonId": "nzraj1MXW5vu983LqyBua",
             "lessonTitle": "데이터베이스 연동"
           }
         ]
@@ -512,11 +512,11 @@
         "lessonCount": 2,
         "lessons": [
           {
-            "lessonId": 2066,
+            "lessonId": "pCobzac2JI-mIjFqXnbWH",
             "lessonTitle": "JWT 기반 인증 구현"
           },
           {
-            "lessonId": 2067,
+            "lessonId": "dt1JTuItrnAvXt9C2GFAw",
             "lessonTitle": "서버 성능 테스트 및 최적화"
           }
         ]
@@ -525,7 +525,7 @@
   },
   {
     "createdAt": "2025-08-23T02:37:28.254808+09:00",
-    "lectureId": 1009,
+    "lectureId": "zdLZx-AHYNXSZ4--eOfnn",
     "authorId": "seyun0714",
     "title": "Docker와 Kubernetes 마스터",
     "description": "컨테이너 기술의 핵심 Docker와 오케스트레이션 도구의 표준 Kubernetes를 마스터하여 인프라 관리의 신이 되어보세요.",
@@ -540,15 +540,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2068,
+            "lessonId": "0zDdu9TLMeXCYmCnPyWKn",
             "lessonTitle": "Docker 이미지와 컨테이너"
           },
           {
-            "lessonId": 2069,
+            "lessonId": "Nwzu_cCA9VHDZerAAwnV4",
             "lessonTitle": "Dockerfile 작성 실습"
           },
           {
-            "lessonId": 2070,
+            "lessonId": "ecvhGTnrAkugfKQxskAZ3",
             "lessonTitle": "Docker Networking"
           }
         ]
@@ -558,19 +558,19 @@
         "lessonCount": 4,
         "lessons": [
           {
-            "lessonId": 2071,
+            "lessonId": "St7iXltfYUm2Vhxgv1Agl",
             "lessonTitle": "Kubernetes 아키텍처"
           },
           {
-            "lessonId": 2072,
+            "lessonId": "sA-OplTGDuTdlyXQvN3rT",
             "lessonTitle": "Pod, ReplicaSet, Deployment"
           },
           {
-            "lessonId": 2073,
+            "lessonId": "ylZ0KcXALC8ppnNH6kBE1",
             "lessonTitle": "Service와 Ingress"
           },
           {
-            "lessonId": 2074,
+            "lessonId": "lCXYkuYqlyy8oUS-mD7t2",
             "lessonTitle": "ConfigMap과 Secret"
           }
         ]
@@ -580,15 +580,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2075,
+            "lessonId": "iMgpmJSWgB0wOBb0Bq1uT",
             "lessonTitle": "스토리지 (PV, PVC, StorageClass)"
           },
           {
-            "lessonId": 2076,
+            "lessonId": "yth3RKCB_QBxa5m6UReGK",
             "lessonTitle": "Helm을 이용한 패키지 관리"
           },
           {
-            "lessonId": 2077,
+            "lessonId": "kiC7T1gXwrccM0tiYDQw4",
             "lessonTitle": "AWS EKS 클러스터 구축"
           }
         ]
@@ -597,7 +597,7 @@
   },
   {
     "createdAt": "2025-08-21T12:14:28.254808+09:00",
-    "lectureId": 1010,
+    "lectureId": "RHM_JHMMbX5BydrRBmPAX",
     "authorId": "seyun0714",
     "title": "Jenkins로 CI/CD 파이프라인 구축하기",
     "description": "대표적인 자동화 서버 Jenkins를 활용하여 빌드, 테스트, 배포를 자동화하는 CI/CD 파이프라인을 구축합니다.",
@@ -612,11 +612,11 @@
         "lessonCount": 2,
         "lessons": [
           {
-            "lessonId": 2078,
+            "lessonId": "GXTxP6L5UG_PDqhmP33oZ",
             "lessonTitle": "Jenkins 설치 및 기본 설정"
           },
           {
-            "lessonId": 2079,
+            "lessonId": "UkuFv5yRHH5ph9PZaraLP",
             "lessonTitle": "첫 자동화 Job 만들기"
           }
         ]
@@ -626,15 +626,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2080,
+            "lessonId": "poCdQtyW2jNMGC2uoF3Zn",
             "lessonTitle": "Pipeline as Code (Jenkinsfile)"
           },
           {
-            "lessonId": 2081,
+            "lessonId": "D745P5b-MUtc6HpC1G904",
             "lessonTitle": "Git 연동 및 자동 빌드"
           },
           {
-            "lessonId": 2082,
+            "lessonId": "7ZmD2fgXDVUdL4zY9mSxD",
             "lessonTitle": "자동 테스트 및 결과 리포팅"
           }
         ]
@@ -644,11 +644,11 @@
         "lessonCount": 2,
         "lessons": [
           {
-            "lessonId": 2083,
+            "lessonId": "6OeUVBUwNAjfFtR42qjKx",
             "lessonTitle": "SSH를 이용한 원격 서버 배포"
           },
           {
-            "lessonId": 2084,
+            "lessonId": "J4LtAs53rBX_v4nJknoEF",
             "lessonTitle": "Blue/Green 무중단 배포 전략"
           }
         ]
@@ -657,7 +657,7 @@
   },
   {
     "createdAt": "2025-08-19T18:52:37.254808+09:00",
-    "lectureId": 1011,
+    "lectureId": "gvFc4rAt92LP8bWbjkK9r",
     "authorId": "seyun0714",
     "title": "Terraform으로 시작하는 Infrastructure as Code",
     "description": "코드로 인프라를 관리하는 IaC의 핵심 도구, Terraform의 사용법을 익혀 클라우드 자원을 효율적으로 관리합니다.",
@@ -672,11 +672,11 @@
         "lessonCount": 2,
         "lessons": [
           {
-            "lessonId": 2085,
+            "lessonId": "c45744VIaWpFmKAODNBOO",
             "lessonTitle": "Terraform 기본 개념과 HCL 문법"
           },
           {
-            "lessonId": 2086,
+            "lessonId": "gJRfH5xqHmt7LGaQTFdxm",
             "lessonTitle": "AWS VPC 프로비저닝 실습"
           }
         ]
@@ -686,15 +686,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2087,
+            "lessonId": "dyI0YidxZCWGIKVD_un1f",
             "lessonTitle": "변수(Variables)와 출력(Outputs)"
           },
           {
-            "lessonId": 2088,
+            "lessonId": "7fxi_IkR1r7YVd3gMkca9",
             "lessonTitle": "모듈(Modules)을 이용한 코드 재사용"
           },
           {
-            "lessonId": 2089,
+            "lessonId": "dEd5vb0E5_KVTDzEdYCbY",
             "lessonTitle": "상태(State) 관리"
           }
         ]
@@ -704,15 +704,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2090,
+            "lessonId": "SL_WvMUc05KdcYFDBep1v",
             "lessonTitle": "EC2와 RDS 인스턴스 생성"
           },
           {
-            "lessonId": 2091,
+            "lessonId": "d8P6X57lHfuk8cAE1AAeb",
             "lessonTitle": "로드밸런서와 오토스케일링 그룹"
           },
           {
-            "lessonId": 2092,
+            "lessonId": "D8hd9850Ky98ClYg0SxFl",
             "lessonTitle": "Terraform Cloud 연동"
           }
         ]
@@ -721,7 +721,7 @@
   },
   {
     "createdAt": "2025-08-22T06:55:59.254808+09:00",
-    "lectureId": 1012,
+    "lectureId": "waEFm1kcdTb4J-vMKe0GR",
     "authorId": "seyun0714",
     "title": "초보자를 위한 Linux 기초",
     "description": "서버 관리의 첫걸음, Linux 명령어와 파일 시스템, 네트워크 설정 등 DevOps 엔지니어가 알아야 할 필수 지식을 다룹니다.",
@@ -736,15 +736,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2093,
+            "lessonId": "tG31ydZWR95vG8ZB1phzg",
             "lessonTitle": "리눅스 터미널과 기본 명령어 (ls, cd, pwd)"
           },
           {
-            "lessonId": 2094,
+            "lessonId": "WsJ0oHXwdDRNQYuQYbkFw",
             "lessonTitle": "파일 및 디렉토리 관리 (mkdir, rm, cp, mv)"
           },
           {
-            "lessonId": 2095,
+            "lessonId": "zLxf2NZ92y2kQGep5-6KA",
             "lessonTitle": "파일 내용 확인 (cat, head, tail, more)"
           }
         ]
@@ -754,15 +754,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2096,
+            "lessonId": "VFosfQz5i3qYKgmag9qqu",
             "lessonTitle": "사용자 및 그룹 관리"
           },
           {
-            "lessonId": 2097,
+            "lessonId": "TXUwYSpJM6VePwIBCEM9-",
             "lessonTitle": "파일 권한의 이해 (chmod, chown)"
           },
           {
-            "lessonId": 2098,
+            "lessonId": "28fukErZwDz5uJ_3mNw0q",
             "lessonTitle": "프로세스 관리 (ps, top, kill)"
           }
         ]
@@ -772,15 +772,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2099,
+            "lessonId": "A44pLeACx18agYiU8PqMQ",
             "lessonTitle": "쉘 스크립트 작성 및 실행"
           },
           {
-            "lessonId": 2100,
+            "lessonId": "ctxQ9P4pZNwo4HBfddMrL",
             "lessonTitle": "변수와 조건문"
           },
           {
-            "lessonId": 2101,
+            "lessonId": "x0tLCsRmxXS8VB1bSJ9RD",
             "lessonTitle": "반복문과 함수"
           }
         ]
@@ -789,7 +789,7 @@
   },
   {
     "createdAt": "2025-08-23T02:04:52.254808+09:00",
-    "lectureId": 1013,
+    "lectureId": "OVmNhMoSVZzVijjVtAyhM",
     "authorId": "seyun0714",
     "title": "Python 데이터 분석 올인원",
     "description": "Numpy, Pandas, Matplotlib, Seaborn 등 파이썬 데이터 분석 라이브러리를 총망라하여 데이터 과학자로 거듭나세요.",
@@ -804,11 +804,11 @@
         "lessonCount": 2,
         "lessons": [
           {
-            "lessonId": 2102,
+            "lessonId": "8Ne0-8rCha3WwLXvNLLpF",
             "lessonTitle": "Numpy 배열 생성 및 연산"
           },
           {
-            "lessonId": 2103,
+            "lessonId": "bd6iiNctY0XMyEsdpXSyc",
             "lessonTitle": "Numpy 브로드캐스팅"
           }
         ]
@@ -818,19 +818,19 @@
         "lessonCount": 4,
         "lessons": [
           {
-            "lessonId": 2104,
+            "lessonId": "mzCLOyX0upnEwxnzc-gVI",
             "lessonTitle": "Series와 DataFrame"
           },
           {
-            "lessonId": 2105,
+            "lessonId": "tbzKRLVfdEHpfD3GltZyO",
             "lessonTitle": "데이터 선택 및 필터링"
           },
           {
-            "lessonId": 2106,
+            "lessonId": "14CdEyqwaF9_uUXUi3OTm",
             "lessonTitle": "데이터 정제 및 가공 실습"
           },
           {
-            "lessonId": 2107,
+            "lessonId": "uUvNZmiJa2BQNa-6-VhRj",
             "lessonTitle": "Groupby와 Pivot Table"
           }
         ]
@@ -840,15 +840,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2108,
+            "lessonId": "ms9kZ4qDt2Yv6UbFcH3N8",
             "lessonTitle": "Matplotlib 기본 플롯"
           },
           {
-            "lessonId": 2109,
+            "lessonId": "dU5kFuo6SAh2Ylju_icVb",
             "lessonTitle": "Seaborn으로 더 예쁘게 시각화하기"
           },
           {
-            "lessonId": 2110,
+            "lessonId": "OCSj3uL15fbH7HUhD4kLD",
             "lessonTitle": "시각화 퀴즈"
           }
         ]
@@ -857,7 +857,7 @@
   },
   {
     "createdAt": "2025-08-20T05:24:48.254808+09:00",
-    "lectureId": 1014,
+    "lectureId": "iUqitfOQ2Dry7chpOU0qR",
     "authorId": "seyun0714",
     "title": "SQLD 자격증 대비",
     "description": "데이터베이스의 핵심 언어 SQL! SQLD 자격증 취득을 목표로 기본 문법부터 고급 쿼리까지 완벽하게 대비합니다.",
@@ -872,15 +872,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2111,
+            "lessonId": "iyXuHtJqKwW8RjeL2HHC9",
             "lessonTitle": "SELECT, FROM, WHERE"
           },
           {
-            "lessonId": 2112,
+            "lessonId": "-4jyFHUfB3d5aSVj6WdTl",
             "lessonTitle": "다양한 조건으로 데이터 조회하기"
           },
           {
-            "lessonId": 2113,
+            "lessonId": "l_fFXxlfPv6HujJAOhIoz",
             "lessonTitle": "GROUP BY와 HAVING"
           }
         ]
@@ -890,15 +890,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2114,
+            "lessonId": "RmUerBzRJTJpwX6vU3qqe",
             "lessonTitle": "JOIN을 이용한 테이블 결합"
           },
           {
-            "lessonId": 2115,
+            "lessonId": "GdrkXIQuNtjl09iNG3uIH",
             "lessonTitle": "서브쿼리(Subquery)"
           },
           {
-            "lessonId": 2116,
+            "lessonId": "0sfg55RLBIs6sbZiQgHlT",
             "lessonTitle": "윈도우 함수(Window Function)"
           }
         ]
@@ -908,11 +908,11 @@
         "lessonCount": 2,
         "lessons": [
           {
-            "lessonId": 2117,
+            "lessonId": "PHoFEmaobbkoL8Jmj9oOj",
             "lessonTitle": "기출문제 풀이 1"
           },
           {
-            "lessonId": 2118,
+            "lessonId": "Svct3HWtansdvYV9ix-ai",
             "lessonTitle": "기출문제 풀이 2"
           }
         ]
@@ -921,7 +921,7 @@
   },
   {
     "createdAt": "2025-08-22T03:56:37.254808+09:00",
-    "lectureId": 1015,
+    "lectureId": "2nkNiOPTHGE64sK1iWWOg",
     "authorId": "seyun0714",
     "title": "Tableau를 활용한 데이터 시각화",
     "description": "코딩 없이 드래그 앤 드롭만으로 데이터를 시각화하고 강력한 인사이트를 도출하는 방법을 Tableau로 배워봅니다.",
@@ -936,15 +936,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2119,
+            "lessonId": "dzIlbKO-ebVJ3kc24eWuO",
             "lessonTitle": "태블로 인터페이스와 데이터 연결"
           },
           {
-            "lessonId": 2120,
+            "lessonId": "N75l1y82QhwwkPxfiFcTS",
             "lessonTitle": "측정값과 차원"
           },
           {
-            "lessonId": 2121,
+            "lessonId": "TrifJdspreXXgZAJac0D9",
             "lessonTitle": "막대 차트와 라인 차트 만들기"
           }
         ]
@@ -954,15 +954,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2122,
+            "lessonId": "IoaeWo_Jn-UuU1M8VxiT8",
             "lessonTitle": "필터와 매개변수 활용"
           },
           {
-            "lessonId": 2123,
+            "lessonId": "S3K1MMLLgaGLP7yvwy0CL",
             "lessonTitle": "대시보드 액션 추가하기"
           },
           {
-            "lessonId": 2124,
+            "lessonId": "wbh5F99b4svy5SWpYlOdZ",
             "lessonTitle": "스토리텔링과 공유"
           }
         ]
@@ -971,7 +971,7 @@
   },
   {
     "createdAt": "2025-08-24T07:36:03.254808+09:00",
-    "lectureId": 1016,
+    "lectureId": "udpYsycrp2_noPIXQ14ih",
     "authorId": "seyun0714",
     "title": "Apache Spark을 이용한 대용량 데이터 처리",
     "description": "빅데이터 처리의 표준, Spark의 동작 원리를 이해하고 PySpark를 이용해 대용량 데이터를 분산 처리하는 방법을 배웁니다.",
@@ -986,11 +986,11 @@
         "lessonCount": 2,
         "lessons": [
           {
-            "lessonId": 2125,
+            "lessonId": "GRSx6uReIykFOTORIHsvg",
             "lessonTitle": "Spark RDD와 DataFrame"
           },
           {
-            "lessonId": 2126,
+            "lessonId": "TG83fk1K2PaNe0qsHYgCn",
             "lessonTitle": "로컬 환경에서 PySpark 실행하기"
           }
         ]
@@ -1000,15 +1000,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2127,
+            "lessonId": "UcY-GYGNTUeyWZ9XQdDZM",
             "lessonTitle": "DataFrame 생성 및 조작"
           },
           {
-            "lessonId": 2128,
+            "lessonId": "eyPVvOLmpPmzi33Lz4-7N",
             "lessonTitle": "Spark SQL 쿼리 실행"
           },
           {
-            "lessonId": 2129,
+            "lessonId": "baeHbFaNQsgyrszGoSof8",
             "lessonTitle": "사용자 정의 함수(UDF)"
           }
         ]
@@ -1018,15 +1018,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2130,
+            "lessonId": "41rm1BuHm5Io0fk-E0wV7",
             "lessonTitle": "Spark 아키텍처와 동작 원리"
           },
           {
-            "lessonId": 2131,
+            "lessonId": "FIZWX_f8qfAOXpBo7sfix",
             "lessonTitle": "Spark 애플리케이션 튜닝"
           },
           {
-            "lessonId": 2132,
+            "lessonId": "UpR2NsUWXiOXd6kPB9d66",
             "lessonTitle": "AWS EMR에서 Spark 실행하기"
           }
         ]
@@ -1035,7 +1035,7 @@
   },
   {
     "createdAt": "2025-08-21T22:41:24.254808+09:00",
-    "lectureId": 1017,
+    "lectureId": "1zeZ22eIs-jCQmD53wGhl",
     "authorId": "seyun0714",
     "title": "SwiftUI로 만드는 iOS 앱 개발",
     "description": "선언형 UI 프레임워크인 SwiftUI를 사용하여 아름답고 직관적인 iOS 앱을 만들어보는 입문부터 실전까지의 과정입니다.",
@@ -1050,15 +1050,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2133,
+            "lessonId": "6Ty785h40hNuGaxoewK82",
             "lessonTitle": "View와 Modifier"
           },
           {
-            "lessonId": 2134,
+            "lessonId": "AqRoKOWo1pINWNnWofm8U",
             "lessonTitle": "나만의 프로필 화면 만들기"
           },
           {
-            "lessonId": 2135,
+            "lessonId": "5jlbn5-GkxLQ9aVIelr_Q",
             "lessonTitle": "State와 Binding"
           }
         ]
@@ -1068,15 +1068,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2136,
+            "lessonId": "OgjqeKGce9AjcuaQRxaxq",
             "lessonTitle": "NavigationView와 NavigationLink"
           },
           {
-            "lessonId": 2137,
+            "lessonId": "upJm0mBSan7j_iGP6TUNR",
             "lessonTitle": "리스트와 그리드 뷰"
           },
           {
-            "lessonId": 2138,
+            "lessonId": "5j4AZdLlv2PkUiDOh-o6L",
             "lessonTitle": "데이터 모델링과 ObservableObject"
           }
         ]
@@ -1086,15 +1086,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2139,
+            "lessonId": "FH6DNLsno1evPZDSf2Y9C",
             "lessonTitle": "네트워크 통신과 데이터 파싱"
           },
           {
-            "lessonId": 2140,
+            "lessonId": "ziUpp6nBZ1UV74wtjndkT",
             "lessonTitle": "Core Data를 이용한 데이터 저장"
           },
           {
-            "lessonId": 2141,
+            "lessonId": "sqP4Il9SPWNKWusxtOBI3",
             "lessonTitle": "애니메이션과 제스처"
           }
         ]
@@ -1103,7 +1103,7 @@
   },
   {
     "createdAt": "2025-08-21T07:33:05.254808+09:00",
-    "lectureId": 1018,
+    "lectureId": "247FGXw_gk5vd2DO6ow22",
     "authorId": "seyun0714",
     "title": "Kotlin과 Jetpack Compose 안드로이드 개발",
     "description": "구글이 선택한 Kotlin과 Jetpack Compose를 사용하여 최신 트렌드의 안드로이드 앱을 개발합니다.",
@@ -1118,15 +1118,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2142,
+            "lessonId": "DYgezov2qeDLXzZQNVoMh",
             "lessonTitle": "Composable 함수와 상태 관리"
           },
           {
-            "lessonId": 2143,
+            "lessonId": "VehNwcz89SwPcsxD9h-bH",
             "lessonTitle": "레이아웃 (Column, Row, Box)"
           },
           {
-            "lessonId": 2144,
+            "lessonId": "-cbs8xLhWT6UzCNfQMqJj",
             "lessonTitle": "TODO 리스트 앱 만들기"
           }
         ]
@@ -1136,15 +1136,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2145,
+            "lessonId": "ttWLA0pM45zZdUwPAfoZm",
             "lessonTitle": "MVVM 패턴의 이해"
           },
           {
-            "lessonId": 2146,
+            "lessonId": "li447YKLBUwjt6-t_009w",
             "lessonTitle": "ViewModel과 LiveData"
           },
           {
-            "lessonId": 2147,
+            "lessonId": "bciPTjzKl0QSA8fzL_pOV",
             "lessonTitle": "화면 전환 (Navigation)"
           }
         ]
@@ -1154,15 +1154,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2148,
+            "lessonId": "hi_UssK9DN_A4t6z4nAM4",
             "lessonTitle": "Room 데이터베이스 연동"
           },
           {
-            "lessonId": 2149,
+            "lessonId": "RiZKtKn6G0Yi-U5rz80FV",
             "lessonTitle": "Retrofit을 이용한 API 통신"
           },
           {
-            "lessonId": 2150,
+            "lessonId": "qRlK6uHAXH5LWULYkKHiQ",
             "lessonTitle": "코루틴을 활용한 비동기 처리"
           }
         ]
@@ -1171,7 +1171,7 @@
   },
   {
     "createdAt": "2025-08-19T02:30:47.254808+09:00",
-    "lectureId": 1019,
+    "lectureId": "aUdAI1aStcAXYlGSEwjhw",
     "authorId": "seyun0714",
     "title": "React Native로 iOS, Android 앱 한번에 만들기",
     "description": "하나의 코드로 두 개의 플랫폼을! React Native를 활용하여 크로스플랫폼 앱 개발의 모든 것을 알아봅니다.",
@@ -1186,15 +1186,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2151,
+            "lessonId": "YuTfuY3GRK_hG0PR36ov5",
             "lessonTitle": "Expo와 React Native CLI"
           },
           {
-            "lessonId": 2152,
+            "lessonId": "RhP7G_ifVuaJC8MTuCwa8",
             "lessonTitle": "핵심 컴포넌트 알아보기"
           },
           {
-            "lessonId": 2153,
+            "lessonId": "pQC5-uG7NU2JcIswsaEqD",
             "lessonTitle": "스타일링과 레이아웃"
           }
         ]
@@ -1204,15 +1204,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2154,
+            "lessonId": "us2LZLKKK7fspkKogKdVh",
             "lessonTitle": "React Navigation으로 화면 이동"
           },
           {
-            "lessonId": 2155,
+            "lessonId": "NzCJE2YqS55d4ADqjzgQG",
             "lessonTitle": "전역 상태 관리 (Redux or Zustand)"
           },
           {
-            "lessonId": 2156,
+            "lessonId": "vM7bSJSeKkhUqhD_GYqk6",
             "lessonTitle": "API 연동 (Axios)"
           }
         ]
@@ -1222,19 +1222,19 @@
         "lessonCount": 4,
         "lessons": [
           {
-            "lessonId": 2157,
+            "lessonId": "bWNIuTr2EiFi4PeFzc1up",
             "lessonTitle": "Async Storage를 이용한 데이터 저장"
           },
           {
-            "lessonId": 2158,
+            "lessonId": "LFmuh_mWoTa4I8sWLdMts",
             "lessonTitle": "카메라 및 사진 라이브러리 접근"
           },
           {
-            "lessonId": 2159,
+            "lessonId": "yqr5JTv3z6w1Az6EhzRNH",
             "lessonTitle": "푸시 알림 구현"
           },
           {
-            "lessonId": 2160,
+            "lessonId": "UYiskxcwIl6vl8V7PERs2",
             "lessonTitle": "앱 배포 준비 (빌드 및 스토어 등록)"
           }
         ]
@@ -1243,7 +1243,7 @@
   },
   {
     "createdAt": "2025-08-19T01:29:33.254808+09:00",
-    "lectureId": 1020,
+    "lectureId": "2lT6BqIBm30XxBRYqDu2R",
     "authorId": "seyun0714",
     "title": "Flutter 입문",
     "description": "Google의 크로스플랫폼 프레임워크 Flutter와 Dart 언어를 배워 빠르고 아름다운 앱을 만들어보세요.",
@@ -1258,15 +1258,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2161,
+            "lessonId": "KahFpSDhab4eJGz7kvjzj",
             "lessonTitle": "개발 환경 설정 및 첫 프로젝트"
           },
           {
-            "lessonId": 2162,
+            "lessonId": "NJpuv5BV1V-ecmZ1eRMSh",
             "lessonTitle": "위젯(Widget)의 이해"
           },
           {
-            "lessonId": 2163,
+            "lessonId": "OIxmY9h-9e-V1_o8nxsnd",
             "lessonTitle": "Dart 언어 기초"
           }
         ]
@@ -1276,15 +1276,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2164,
+            "lessonId": "FNQyk1DHnFgc41U6SD0sh",
             "lessonTitle": "Stateless vs Stateful 위젯"
           },
           {
-            "lessonId": 2165,
+            "lessonId": "hVssevryRihu3o8lYJKPz",
             "lessonTitle": "Row, Column, Stack으로 레이아웃 잡기"
           },
           {
-            "lessonId": 2166,
+            "lessonId": "A8p29biX7VnK4FhcsC5ZU",
             "lessonTitle": "ListView와 GridView"
           }
         ]
@@ -1294,11 +1294,11 @@
         "lessonCount": 2,
         "lessons": [
           {
-            "lessonId": 2167,
+            "lessonId": "CmeABSC2panOpzzqPB4Mx",
             "lessonTitle": "간단한 상태 관리 (setState)"
           },
           {
-            "lessonId": 2168,
+            "lessonId": "QIpyxQCwu_bb_CPYjzmLC",
             "lessonTitle": "Navigator를 이용한 화면 이동"
           }
         ]
@@ -1307,7 +1307,7 @@
   },
   {
     "createdAt": "2025-08-22T16:50:03.254808+09:00",
-    "lectureId": 1021,
+    "lectureId": "r4JolB17eE1KrkwZpw5wW",
     "authorId": "seyun0714",
     "title": "PyTorch로 시작하는 딥러닝",
     "description": "가장 인기 있는 딥러닝 프레임워크 PyTorch의 기본기부터 CNN, RNN 모델 구현까지 차근차근 배워봅니다.",
@@ -1322,15 +1322,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2169,
+            "lessonId": "bfSn8_BhpIlCY-tZcMXFG",
             "lessonTitle": "Tensor와 Autograd"
           },
           {
-            "lessonId": 2170,
+            "lessonId": "SNqon6N9N7tF0Fq8akalt",
             "lessonTitle": "선형 회귀 모델 만들기"
           },
           {
-            "lessonId": 2171,
+            "lessonId": "C9VpwSkrcGdS7armqY5zj",
             "lessonTitle": "Dataset과 DataLoader"
           }
         ]
@@ -1340,15 +1340,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2172,
+            "lessonId": "r68jBnrmLTQY4azLg41rO",
             "lessonTitle": "CNN의 이론적 배경"
           },
           {
-            "lessonId": 2173,
+            "lessonId": "Q6EAv1mgnHijtJgOj92l3",
             "lessonTitle": "PyTorch로 CNN 모델 구현"
           },
           {
-            "lessonId": 2174,
+            "lessonId": "sLS5f7OvCU_G15ejiq52A",
             "lessonTitle": "CIFAR-10 이미지 분류 실습"
           }
         ]
@@ -1358,15 +1358,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2175,
+            "lessonId": "nYL3r495shS3gs2SiZFNF",
             "lessonTitle": "RNN, LSTM, GRU의 이해"
           },
           {
-            "lessonId": 2176,
+            "lessonId": "k62SdoajUb0aIU-Gj5I81",
             "lessonTitle": "PyTorch로 RNN 모델 구현"
           },
           {
-            "lessonId": 2177,
+            "lessonId": "xgtomot64E9z_YxsZfg9G",
             "lessonTitle": "텍스트 생성을 통한 자연어 처리 맛보기"
           }
         ]
@@ -1375,7 +1375,7 @@
   },
   {
     "createdAt": "2025-08-19T09:58:13.254808+09:00",
-    "lectureId": 1022,
+    "lectureId": "j79IrBzDMasxJFyXNqjsq",
     "authorId": "seyun0714",
     "title": "밑바닥부터 시작하는 머신러닝",
     "description": "라이브러리 없이 직접 구현하며 배우는 머신러닝의 핵심 원리! 선형 회귀, 로지스틱 회귀, SVM 등을 다룹니다.",
@@ -1390,11 +1390,11 @@
         "lessonCount": 2,
         "lessons": [
           {
-            "lessonId": 2178,
+            "lessonId": "ddJqOElvf9FPptguip-fx",
             "lessonTitle": "경사 하강법의 원리"
           },
           {
-            "lessonId": 2179,
+            "lessonId": "Gf6fzOkI38jbyMc11sOyk",
             "lessonTitle": "Numpy로 경사 하강법 구현"
           }
         ]
@@ -1404,11 +1404,11 @@
         "lessonCount": 2,
         "lessons": [
           {
-            "lessonId": 2180,
+            "lessonId": "aoZAgd6vTDe2eK4OgCBmt",
             "lessonTitle": "선형 회귀 모델 직접 구현하기"
           },
           {
-            "lessonId": 2181,
+            "lessonId": "Qbm0I7MdswDak9uEtk-rn",
             "lessonTitle": "다중 선형 회귀"
           }
         ]
@@ -1418,15 +1418,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2182,
+            "lessonId": "5yrgd-rwDM0Ce4yGn-e_f",
             "lessonTitle": "로지스틱 회귀와 시그모이드 함수"
           },
           {
-            "lessonId": 2183,
+            "lessonId": "F5_0o5134HIOkbbgEaGZh",
             "lessonTitle": "서포트 벡터 머신 (SVM)의 원리"
           },
           {
-            "lessonId": 2184,
+            "lessonId": "s7hWgnFQ6Lc2dqSCMyin3",
             "lessonTitle": "결정 트리 (Decision Tree) 구현"
           }
         ]
@@ -1436,15 +1436,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2185,
+            "lessonId": "lhhK2vaSEmPGZZr4reH2z",
             "lessonTitle": "K-평균 군집화 (K-Means Clustering)"
           },
           {
-            "lessonId": 2186,
+            "lessonId": "S4tGAJliqxTbIoYaJX6ZR",
             "lessonTitle": "주성분 분석 (PCA)"
           },
           {
-            "lessonId": 2187,
+            "lessonId": "ceu6t8HDjEtlzBYRIa0Gx",
             "lessonTitle": "모델 평가와 성능 측정"
           }
         ]
@@ -1453,7 +1453,7 @@
   },
   {
     "createdAt": "2025-08-19T23:00:35.254808+09:00",
-    "lectureId": 1023,
+    "lectureId": "-5wdYnoOYwhirOzIWhI8S",
     "authorId": "seyun0714",
     "title": "OpenCV를 활용한 컴퓨터 비전",
     "description": "Python과 OpenCV를 사용하여 이미지 처리, 객체 탐지 등 컴퓨터 비전의 핵심 기술을 실습 중심으로 학습합니다.",
@@ -1468,15 +1468,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2188,
+            "lessonId": "ZaGGimM2Yt0yizCawlMzs",
             "lessonTitle": "이미지 읽고 쓰기, 색 공간 변환"
           },
           {
-            "lessonId": 2189,
+            "lessonId": "EwcZ_dQs8SG-J4V0sLEFk",
             "lessonTitle": "이미지 필터링과 컨볼루션"
           },
           {
-            "lessonId": 2190,
+            "lessonId": "opkQOslT7ZheyVEpOmBcI",
             "lessonTitle": "기하학적 변환 (크기, 회전, 이동)"
           }
         ]
@@ -1486,15 +1486,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2191,
+            "lessonId": "-inTd2qGyEtmuoAuB2jHr",
             "lessonTitle": "문턱값 처리 (Thresholding)"
           },
           {
-            "lessonId": 2192,
+            "lessonId": "XbIRk0nZOqErX2LK_yk3c",
             "lessonTitle": "엣지 검출 (Canny Edge Detection)"
           },
           {
-            "lessonId": 2193,
+            "lessonId": "NIFpjN68AWGk0mTbYGmwz",
             "lessonTitle": "허프 변환을 이용한 직선/원 검출"
           }
         ]
@@ -1504,11 +1504,11 @@
         "lessonCount": 2,
         "lessons": [
           {
-            "lessonId": 2194,
+            "lessonId": "EH6ktk8e-0f1j5B0otAzq",
             "lessonTitle": "템플릿 매칭"
           },
           {
-            "lessonId": 2195,
+            "lessonId": "qdK47PIBc-3yU-H2MENu4",
             "lessonTitle": "Haar Cascade를 이용한 얼굴 검출"
           }
         ]
@@ -1517,7 +1517,7 @@
   },
   {
     "createdAt": "2025-08-24T01:26:46.254808+09:00",
-    "lectureId": 1024,
+    "lectureId": "Qg4uJDpZQCCobLfInEVaT",
     "authorId": "seyun0714",
     "title": "자연어 처리(NLP) 시작하기",
     "description": "텍스트 데이터에서 의미를 추출하는 자연어 처리의 기본 개념과 텍스트 전처리, 감성 분석 등의 기법을 배웁니다.",
@@ -1532,15 +1532,15 @@
         "lessonCount": 3,
         "lessons": [
           {
-            "lessonId": 2196,
+            "lessonId": "R3zpwfIBKnOPUXyIGLhrR",
             "lessonTitle": "텍스트 정규화와 토큰화"
           },
           {
-            "lessonId": 2197,
+            "lessonId": "4R9YLTT45NLPyBthjxBi6",
             "lessonTitle": "KoNLPy를 이용한 한국어 형태소 분석"
           },
           {
-            "lessonId": 2198,
+            "lessonId": "GuN0A9UCVSK4aIfmgTdp-",
             "lessonTitle": "단어 임베딩의 개념 (Word2Vec, GloVe)"
           }
         ]
@@ -1550,11 +1550,11 @@
         "lessonCount": 2,
         "lessons": [
           {
-            "lessonId": 2199,
+            "lessonId": "x-lJM2sQ1FTpBi8b8yKTf",
             "lessonTitle": "TF-IDF를 이용한 텍스트 벡터화"
           },
           {
-            "lessonId": 2200,
+            "lessonId": "owbQVhiOM2FpNek_abIjZ",
             "lessonTitle": "나이브 베이즈 분류기를 이용한 스팸 메일 분류"
           }
         ]
@@ -1564,11 +1564,11 @@
         "lessonCount": 2,
         "lessons": [
           {
-            "lessonId": 2201,
+            "lessonId": "uNlsIEn_rZZWRfV4baWeH",
             "lessonTitle": "감성 사전 기반 분석"
           },
           {
-            "lessonId": 2202,
+            "lessonId": "9qZY1xxPdp47r9baDsZVy",
             "lessonTitle": "영화 리뷰 긍/부정 분류 실습"
           }
         ]
