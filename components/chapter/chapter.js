@@ -13,10 +13,17 @@ async function createChapter(data) {
 
   function deleteLesson(e) {
     const lessons = chapterElement.querySelectorAll(".lesson-title");
-    console.log(lessons.length);
     if (lessons.length > 1) {
       e.target.closest(".lesson-title").remove();
     }
+    setLessonNumber();
+  }
+
+  function setLessonNumber() {
+    const lessonsNumber = chapterElement.querySelector(".lesson-length");
+    const lessons = chapterElement.querySelectorAll(".lesson-title");
+
+    lessonsNumber.innerText = `${lessons.length}개의 강의`;
   }
 
   componentLoader.bindMultipleData(chapterElement, {
@@ -42,7 +49,10 @@ async function createChapter(data) {
           deleteLesson(e);
         },
       });
+      const lessons = chapterElement.querySelectorAll(".lesson-title");
+
       chapterElement.querySelector(".lessons").appendChild(lesson);
+      setLessonNumber();
     }
   );
 

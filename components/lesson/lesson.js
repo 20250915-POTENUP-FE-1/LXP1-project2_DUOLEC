@@ -9,7 +9,6 @@ async function createLesson(data) {
     COMPONENT_PATH,
     COMPONENT_NAME
   );
-  console.log(lessonElement);
 
   componentLoader.bindData(
     lessonElement,
