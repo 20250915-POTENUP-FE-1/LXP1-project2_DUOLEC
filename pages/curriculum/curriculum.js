@@ -7,6 +7,7 @@ import { addLocalData } from "/utils/local.js";
 import { deleteTempData, loadTempData } from "/utils/session.js";
 import { nanoid } from "https://cdn.skypack.dev/nanoid";
 
+// 챕터 추가 기능
 async function addChapter() {
   const chapterForms = document.querySelectorAll(".chapter-form");
   const lastChapterForm = chapterForms[chapterForms.length - 1];
@@ -20,15 +21,19 @@ async function addChapter() {
     lessons: [],
   });
   lastChapterForm.insertAdjacentElement("afterend", chapter);
+  setChapterLength();
 }
 
+// 챕터 삭제 기능
 function deleteChapter(e) {
   if (document.querySelectorAll(".chapter-form").length > 1) {
     e.target.closest(".chapter-form").remove();
     setChapterNumber();
   }
+  setChapterLength();
 }
 
+// 챕터 넘버링 기능
 function setChapterNumber() {
   const chapters = document.querySelectorAll(".chapter-form");
   chapters.forEach((chapter, index) => {
@@ -38,6 +43,14 @@ function setChapterNumber() {
   });
 }
 
+// 챕터 목록 수 표시 기능
+function setChapterLength() {
+  const elementChapterLength = document.querySelector(".chapter-length");
+  const chapterLength = document.querySelectorAll(".chapter-form").length;
+  elementChapterLength.innerText = `${chapterLength}개의 챕터`;
+}
+
+// 챕터 버튼 클릭 시 챕터 컴포넌트 추가
 document.querySelectorAll(".btn-add").forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -45,6 +58,7 @@ document.querySelectorAll(".btn-add").forEach((btn) => {
   });
 });
 
+// 버튼 submit 시 데이터 가져와서 로컬스토리지에 저장
 $(".btn-submit").addEventListener("click", (e) => {
   e.preventDefault();
   const $chapterForms = document.querySelectorAll(".chapter-form");
@@ -79,16 +93,29 @@ $(".btn-submit").addEventListener("click", (e) => {
   window.location.href = "/index.html";
 });
 
+// 뒤로가기 기능
 $(".back-icon").addEventListener("click", (e) => {
   e.preventDefault();
-  window.history.back();
-});
+  const sessionData = JSON.parse(sessionStorage.getItem("tempData"));
+  const $chapterForms = document.querySelectorAll(".chapter-form");
+  sessionData.curriculum = [];
 
-document.querySelectorAll(".chapter-title-input").forEach((input) => {
-  input.addEventListener("input", (e) => {
-    let titleLength = e.target.closest(".chapter-title-input").length;
-    e.target.closest(".chapter-title-length").innerText = `${titleLength} / 50`;
+  $chapterForms.forEach((form) => {
+    const lessons = Array.from(
+      form.querySelectorAll(".lesson-title-input")
+    ).map((lesson) => ({
+      lessonId: nanoid(),
+      lessonTitle: lesson.value,
+    }));
+    sessionData.curriculum.push({
+      chapterTitle: `${form.querySelector(".chapter-title-input").value}`,
+      lessonCount: form.querySelectorAll(".lesson-title").length,
+      lessons: lessons,
+    });
   });
+
+  sessionStorage.setItem("tempData", JSON.stringify(sessionData));
+  window.history.back();
 });
 
 // 강의 데이터 로드
