@@ -6,7 +6,6 @@ function addTempData(data) {
   data.thumbnail = "assets/thumbnails/thumbnail.png";
   data.enrollmentCount = 0;
   data.totalLessons = 0;
-  console.log(data);
   sessionStorage.setItem("tempData", JSON.stringify(data));
 }
 

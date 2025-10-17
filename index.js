@@ -2,11 +2,11 @@ import { $ } from "/utils/common.js";
 import { loadDummyData } from "/utils/load.js";
 import { createCards } from "/components/card/card.js";
 import { deleteLocalData, loadStorageData } from "./utils/local.js";
+import { deleteTempData } from "./utils/session.js";
 
 let [category, setCategory] = ["전체", (input) => (category = input)];
 let [level, setLevel] = ["전체", (input) => (level = input)];
-let [sort, setSort] = ["인기순", (input) => (sort = input)];
-let [search, setSearch] = ["", (input) => (search = input)];
+let [sort, setSort] = ["최신순", (input) => (sort = input)];
 let lectures = [];
 
 // 헤더의 검색 기능 함수
@@ -32,7 +32,8 @@ async function loadCards() {
   }
   if (sort === "최신순") {
     filtered = filtered.sort(
-      (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+      (a, b) =>
+        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
     );
   } else if (sort === "인기순") {
     filtered = filtered.sort((a, b) => b.enrollmentCount - a.enrollmentCount);
@@ -150,6 +151,10 @@ function openCardMenu(e) {
   const $cardMenuOptions = $card.getElementsByClassName("card-menu-options")[0];
   $cardMenuOptions.classList.add("visible");
 }
+
+$(".header-logo").addEventListener("click", () => {
+  deleteTempData();
+});
 
 // 난이도 필터 버튼 온오프 클릭 이벤트 등록
 $(".btn-level").addEventListener("click", (e) => {
