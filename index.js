@@ -5,7 +5,7 @@ import { loadStorageData } from "./utils/local.js";
 
 let [category, setCategory] = ["전체", (input) => (category = input)];
 let [level, setLevel] = ["전체", (input) => (level = input)];
-let [sort, setSort] = ["인기순", (input) => (sort = input)];
+let [sort, setSort] = ["최신순", (input) => (sort = input)];
 let lectures = [];
 
 // 필터링 조건에 맞는 카드 로드 함수(초기에는 전체 로드)
@@ -19,7 +19,8 @@ async function loadCards() {
   }
   if (sort === "최신순") {
     filtered = filtered.sort(
-      (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+      (a, b) =>
+        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
     );
   } else if (sort === "인기순") {
     filtered = filtered.sort((a, b) => b.enrollmentCount - a.enrollmentCount);
