@@ -11,7 +11,6 @@ async function createChapter(data) {
     COMPONENT_PATH,
     COMPONENT_NAME
   );
-
   componentLoader.bindMultipleData(chapterElement, {
     ".chapter-title-input": { property: "value", value: data.chapterTitle },
     ".chapter-title-length": data.chapterTitleLength,
@@ -42,6 +41,16 @@ async function createChapter(data) {
     ".btn-chapter-delete",
     "click",
     data.deleteChapter
+  );
+
+  // 챕터 인풋 글자수 확인
+  componentLoader.attachEvent(
+    chapterElement,
+    ".chapter-title-input",
+    "input",
+    (e) => {
+      e.target.nextElementSibling.innerText = `${e.target.value.length} / 50`;
+    }
   );
 
   //  레슨 인풋 생성
