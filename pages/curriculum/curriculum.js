@@ -58,11 +58,15 @@ document.querySelectorAll(".btn-add").forEach((btn) => {
   });
 });
 
+$(".header-logo").addEventListener("click", () => {
+  deleteTempData();
+});
+
 // 버튼 submit 시 데이터 가져와서 로컬스토리지에 저장
 $(".btn-submit").addEventListener("click", (e) => {
   e.preventDefault();
   const $chapterForms = document.querySelectorAll(".chapter-form");
-  const tempData = modifyTempData();
+  const tempData = loadTempData();
   const curriculum = [];
 
   for (let i = 0; i < $chapterForms.length; i++) {
@@ -96,7 +100,7 @@ $(".btn-submit").addEventListener("click", (e) => {
 // 뒤로가기 기능
 $(".back-icon").addEventListener("click", (e) => {
   e.preventDefault();
-  const sessionData = JSON.parse(sessionStorage.getItem("tempData"));
+  const sessionData = loadTempData();
   const $chapterForms = document.querySelectorAll(".chapter-form");
   sessionData.curriculum = [];
 
