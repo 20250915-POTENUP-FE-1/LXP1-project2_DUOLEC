@@ -145,16 +145,19 @@ main {
   width: 100%;
   height: 200px;
 
-  padding: 20px;
+  padding: 20px 20px 40px;
   position: relative;
   background-color: transparent;
   border: 1px solid #c8c8c8;
   border-radius: 20px;
+  transition: all .3s;
+  overflow: hidden
 }
 
 .description-text {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .btn-expand-description {
@@ -176,8 +179,8 @@ main {
   cursor: pointer;
 }
 
-.btn-expand-description:hover {
-  text-decoration: underline;
+.btn-expand-description i {
+  transition: all .3s
 }
 
 .main-curriculum {
@@ -210,4 +213,8 @@ main {
 .main-curriculum-header-count {
   font-size: 16px;
   color: #c8c8c8;
+}
+
+.rotate {
+  transform: rotate(180deg)
 }
