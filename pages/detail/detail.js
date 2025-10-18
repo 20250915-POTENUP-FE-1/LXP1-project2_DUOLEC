@@ -3,6 +3,7 @@ import { loadSpecificData } from "../../utils/local.js";
 import { $, checkQueryString } from "/utils/common.js";
 
 function bindData(data) {
+  $(".main-top-image").src = `/${data.thumbnail}`;
   $(".author").textContent = `${data.authorId}`;
   $(".level").textContent = `난이도: ${data.level}`;
   $(".title").textContent = `${data.title}`;
