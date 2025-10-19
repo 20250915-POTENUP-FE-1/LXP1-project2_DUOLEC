@@ -20,8 +20,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const lectureData = loadSpecificData(lectureId);
   bindData(lectureData);
 
-  console.log(lectureData);
-
   const chapterData = lectureData.curriculum.map((chapter, index) => {
     return {
       chapterTitle: `Chapter ${index + 1}. ${chapter.chapterTitle}`,
@@ -34,5 +32,23 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   chapters.forEach((chapter) => {
     $(".main-curriculum").appendChild(chapter);
+  });
+
+  $(
+    ".main-top-image"
+  ).style.cssText = `background-image: url(${lectureData.thumbnail}); background-repeat : no-repeat; background-posiiton: center; background-size: 100% 100%;`;
+
+  $(".btn-expand-description").addEventListener("click", () => {
+    const descriptionHeight = $(".description-text").scrollHeight;
+
+    if ($(".main-info-description").classList.contains("open")) {
+      $(".main-info-description").style.height = `200px`;
+      $(".main-info-description").classList.remove("open");
+    } else {
+      $(".main-info-description").style.height = `${descriptionHeight + 100}px`;
+      $(".main-info-description").classList.add("open");
+    }
+
+    $(".btn-expand-description i").classList.toggle("rotate");
   });
 });

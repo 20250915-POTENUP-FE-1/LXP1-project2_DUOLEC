@@ -1,6 +1,6 @@
 function addTempData(data) {
   data.authorId = "seyun0714";
-  data.thumbnail = "assets/thumbnails/thumbnail.png";
+  // data.thumbnail = "assets/thumbnails/thumbnail.png";
   data.enrollmentCount = 0;
   data.totalLessons = 0;
   sessionStorage.setItem("tempData", JSON.stringify(data));
