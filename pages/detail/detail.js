@@ -3,7 +3,6 @@ import { loadSpecificData } from "../../utils/local.js";
 import { $, checkQueryString } from "/utils/common.js";
 
 function bindData(data) {
-  $(".main-top-image").src = `/${data.thumbnail}`;
   $(".author").textContent = `${data.authorId}`;
   $(".level").textContent = `난이도: ${data.level}`;
   $(".title").textContent = `${data.title}`;
@@ -36,7 +35,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   $(
     ".main-top-image"
-  ).style.cssText = `background-image: url(${lectureData.thumbnail}); background-repeat : no-repeat; background-posiiton: center; background-size: 100% 100%;`;
+  ).style.cssText = `background-image: url(/${lectureData.thumbnail}); background-repeat : no-repeat; background-posiiton: center; background-size: 100% 100%;`;
 
   $(".btn-expand-description").addEventListener("click", () => {
     const descriptionHeight = $(".description-text").scrollHeight;
