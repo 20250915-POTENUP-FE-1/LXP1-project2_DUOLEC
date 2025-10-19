@@ -150,8 +150,8 @@ main {
   background-color: transparent;
   border: 1px solid #c8c8c8;
   border-radius: 20px;
-  transition: all .3s;
-  overflow: hidden
+  transition: all 0.3s;
+  overflow: hidden;
 }
 
 .description-text {
@@ -180,7 +180,7 @@ main {
 }
 
 .btn-expand-description i {
-  transition: all .3s
+  transition: all 0.3s;
 }
 
 .main-curriculum {
@@ -216,5 +216,5 @@ main {
 }
 
 .rotate {
-  transform: rotate(180deg)
+  transform: rotate(180deg);
 }

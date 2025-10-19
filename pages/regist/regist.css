@@ -90,37 +90,40 @@ main {
 
 /* 썸네일 */
 
-.regist-sumnail {
+.regist-thumbnail {
   margin-bottom: 70px;
 }
 
-.regist-sumnail h5 {
+.regist-thumbnail h5 {
   font-size: 18px;
   margin-bottom: 15px;
 }
 
-.regist-sumnail p {
+.regist-thumbnail p {
   font-size: 14px;
   color: #8c8c8c;
 
   margin-bottom: 33px;
 }
 
-.regist-sumnail-area {
+.regist-thumbnail-area {
   display: flex;
   justify-content: center;
 }
 
-.regist-sumnail-area label {
+.regist-thumbnail-area label {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  width: calc(100vw - 95%);
-  height: 323px;
+  width: calc(100vw - 65vw);
+  height: 500px;
   border: 1px solid #333;
   border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .upload-image {
@@ -135,19 +138,19 @@ main {
   border-radius: 50%;
 }
 
-.regist-sumnail-area label p {
+.regist-thumbnail-area label p {
   margin: 0;
   color: #333;
   font-size: 18px;
   margin-bottom: 16px;
 }
 
-.regist-sumnail-area label span {
+.regist-thumbnail-area label span {
   color: #ccc;
   font-size: 16px;
 }
 
-.regist-sumnail input[type="file"] {
+.regist-thumbnail input[type="file"] {
   display: none;
 }
 
