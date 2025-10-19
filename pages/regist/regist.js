@@ -51,9 +51,9 @@ function checkSessionData(sessionData) {
   $category.innerText = sessionData.category;
   $description.value = sessionData.description;
   $thumbnail.style.backgroundImage = `url(${
-    localData.thumbnail.startsWith("assets/thumbnails")
-      ? `/${localData.thumbnail}`
-      : localData.thumbnail
+    sessionData.thumbnail.startsWith("assets/thumbnails")
+      ? `/${sessionData.thumbnail}`
+      : sessionData.thumbnail
   })`;
 
   $(
