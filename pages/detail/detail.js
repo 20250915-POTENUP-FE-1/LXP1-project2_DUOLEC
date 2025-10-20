@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   $(
     ".main-top-image"
-  ).style.cssText = `background-image: url(/${lectureData.thumbnail}); background-repeat : no-repeat; background-posiiton: center; background-size: 100% 100%;`;
+  ).style.cssText = `background-image: url(${lectureData.thumbnail}); background-repeat : no-repeat; background-posiiton: center; background-size: 100% 100%;`;
 
   $(".btn-expand-description").addEventListener("click", () => {
     const descriptionHeight = $(".description-text").scrollHeight;
